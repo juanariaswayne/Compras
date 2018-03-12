@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SBDAEGESModelStoreContainer" CdmEntityContainer="SBDAEGESEntities">
+    <EntitySetMapping Name="USR_ConceptoSubCuenta">
+      <EntityTypeMapping TypeName="SBDAEGESModel.USR_ConceptoSubCuenta">
+        <MappingFragment StoreEntitySet="USR_ConceptoSubCuenta">
+          <ScalarProperty Name="subCuenta" ColumnName="subCuenta" />
+          <ScalarProperty Name="concepto" ColumnName="concepto" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USR_ArticuloSubCuenta">
+      <EntityTypeMapping TypeName="SBDAEGESModel.USR_ArticuloSubCuenta">
+        <MappingFragment StoreEntitySet="USR_ArticuloSubCuenta">
+          <ScalarProperty Name="Concepto" ColumnName="Concepto" />
+          <ScalarProperty Name="esDeProducto" ColumnName="esDeProducto" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="subCuenta" ColumnName="subCuenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USR_ControlProrrateoEmpresaEGES">
+      <EntityTypeMapping TypeName="SBDAEGESModel.USR_ControlProrrateoEmpresaEGES">
+        <MappingFragment StoreEntitySet="USR_ControlProrrateoEmpresaEGES">
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="Anio" ColumnName="Anio" />
+          <ScalarProperty Name="FechaProrrateoEmpresa" ColumnName="FechaProrrateoEmpresa" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

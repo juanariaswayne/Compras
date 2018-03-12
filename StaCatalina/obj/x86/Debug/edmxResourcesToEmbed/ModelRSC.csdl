@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SBDARSCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="USR_ArticuloSubCuenta">
+    <Key>
+      <PropertyRef Name="subCuenta" />
+    </Key>
+    <Property Name="subCuenta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Concepto" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="SBDARSCEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="USR_ArticuloSubCuenta" EntityType="Self.USR_ArticuloSubCuenta" />
+    <EntitySet Name="USR_ConceptoSubCuenta" EntityType="SBDARSCModel.USR_ConceptoSubCuenta" />
+    <FunctionImport Name="TraeConceptoCtaContable" ReturnType="Collection(SBDARSCModel.TraeConceptoCtaContable_Result)" />
+    <EntitySet Name="USR_ControlProrrateoEmpresa" EntityType="SBDARSCModel.USR_ControlProrrateoEmpresa" />
+  </EntityContainer>
+  <EntityType Name="USR_ConceptoSubCuenta">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="concepto" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="subCuenta" Type="Int32" Nullable="false" />
+  </EntityType>
+  <ComplexType Name="TraeConceptoCtaContable_Result">
+    <Property Type="String" Name="con_Cod" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="con_Desc" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="cappla_CuentaCpra" Nullable="false" MaxLength="15" />
+    <Property Type="String" Name="cta_descrip" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DescripSubCuenta" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="subCuenta" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="USR_ControlProrrateoEmpresa">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FechaProrrateoEmpresa" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Anio" Type="Int32" Nullable="false" />
+    <Property Name="Mes" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,134 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaCatalina", "StaCatalina\StaCatalina.csproj", "{30FDF28A-C4D8-4ECD-8669-8B77EF924F23}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Entities", "Entities\Entities.vbproj", "{8655B240-FFCD-47AF-A432-EC0271482B22}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BLL", "BLL\BLL.vbproj", "{61195B43-5662-4A4C-B868-1BDE3A4989AB}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DAL", "DAL\DAL.vbproj", "{EDC360D4-B5CC-4D35-80EB-AFB5E8905B07}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "BarCode", "BarCode\BarCode.vbproj", "{38BD492C-D18C-43DF-91A3-C615275A3178}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MenuSistema", "MenuSistema\MenuSistema.csproj", "{55B45091-842D-428A-B31C-2A22EC5DB609}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Seguridad", "Seguridad\Seguridad.vbproj", "{54F00211-E33C-4848-A2B0-5DF7465C263B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30FDF28A-C4D8-4ECD-8669-8B77EF924F23}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{30FDF28A-C4D8-4ECD-8669-8B77EF924F23}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{30FDF28A-C4D8-4ECD-8669-8B77EF924F23}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{30FDF28A-C4D8-4ECD-8669-8B77EF924F23}.Debug|x86.ActiveCfg = Debug|x86
+		{30FDF28A-C4D8-4ECD-8669-8B77EF924F23}.Debug|x86.Build.0 = Debug|x86
+		{30FDF28A-C4D8-4ECD-8669-8B77EF924F23}.Release|Any CPU.ActiveCfg = Release|x86
+		{30FDF28A-C4D8-4ECD-8669-8B77EF924F23}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{30FDF28A-C4D8-4ECD-8669-8B77EF924F23}.Release|Mixed Platforms.Build.0 = Release|x86
+		{30FDF28A-C4D8-4ECD-8669-8B77EF924F23}.Release|x86.ActiveCfg = Release|x86
+		{30FDF28A-C4D8-4ECD-8669-8B77EF924F23}.Release|x86.Build.0 = Release|x86
+		{8655B240-FFCD-47AF-A432-EC0271482B22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8655B240-FFCD-47AF-A432-EC0271482B22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8655B240-FFCD-47AF-A432-EC0271482B22}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{8655B240-FFCD-47AF-A432-EC0271482B22}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{8655B240-FFCD-47AF-A432-EC0271482B22}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8655B240-FFCD-47AF-A432-EC0271482B22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8655B240-FFCD-47AF-A432-EC0271482B22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8655B240-FFCD-47AF-A432-EC0271482B22}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{8655B240-FFCD-47AF-A432-EC0271482B22}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{8655B240-FFCD-47AF-A432-EC0271482B22}.Release|x86.ActiveCfg = Release|Any CPU
+		{61195B43-5662-4A4C-B868-1BDE3A4989AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61195B43-5662-4A4C-B868-1BDE3A4989AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61195B43-5662-4A4C-B868-1BDE3A4989AB}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{61195B43-5662-4A4C-B868-1BDE3A4989AB}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{61195B43-5662-4A4C-B868-1BDE3A4989AB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{61195B43-5662-4A4C-B868-1BDE3A4989AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61195B43-5662-4A4C-B868-1BDE3A4989AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61195B43-5662-4A4C-B868-1BDE3A4989AB}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{61195B43-5662-4A4C-B868-1BDE3A4989AB}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{61195B43-5662-4A4C-B868-1BDE3A4989AB}.Release|x86.ActiveCfg = Release|Any CPU
+		{EDC360D4-B5CC-4D35-80EB-AFB5E8905B07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDC360D4-B5CC-4D35-80EB-AFB5E8905B07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDC360D4-B5CC-4D35-80EB-AFB5E8905B07}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{EDC360D4-B5CC-4D35-80EB-AFB5E8905B07}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{EDC360D4-B5CC-4D35-80EB-AFB5E8905B07}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EDC360D4-B5CC-4D35-80EB-AFB5E8905B07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDC360D4-B5CC-4D35-80EB-AFB5E8905B07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDC360D4-B5CC-4D35-80EB-AFB5E8905B07}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{EDC360D4-B5CC-4D35-80EB-AFB5E8905B07}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{EDC360D4-B5CC-4D35-80EB-AFB5E8905B07}.Release|x86.ActiveCfg = Release|Any CPU
+		{38BD492C-D18C-43DF-91A3-C615275A3178}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38BD492C-D18C-43DF-91A3-C615275A3178}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38BD492C-D18C-43DF-91A3-C615275A3178}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{38BD492C-D18C-43DF-91A3-C615275A3178}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{38BD492C-D18C-43DF-91A3-C615275A3178}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{38BD492C-D18C-43DF-91A3-C615275A3178}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38BD492C-D18C-43DF-91A3-C615275A3178}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38BD492C-D18C-43DF-91A3-C615275A3178}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{38BD492C-D18C-43DF-91A3-C615275A3178}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{38BD492C-D18C-43DF-91A3-C615275A3178}.Release|x86.ActiveCfg = Release|Any CPU
+		{55B45091-842D-428A-B31C-2A22EC5DB609}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55B45091-842D-428A-B31C-2A22EC5DB609}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55B45091-842D-428A-B31C-2A22EC5DB609}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{55B45091-842D-428A-B31C-2A22EC5DB609}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{55B45091-842D-428A-B31C-2A22EC5DB609}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{55B45091-842D-428A-B31C-2A22EC5DB609}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55B45091-842D-428A-B31C-2A22EC5DB609}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55B45091-842D-428A-B31C-2A22EC5DB609}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{55B45091-842D-428A-B31C-2A22EC5DB609}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{55B45091-842D-428A-B31C-2A22EC5DB609}.Release|x86.ActiveCfg = Release|Any CPU
+		{54F00211-E33C-4848-A2B0-5DF7465C263B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54F00211-E33C-4848-A2B0-5DF7465C263B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54F00211-E33C-4848-A2B0-5DF7465C263B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{54F00211-E33C-4848-A2B0-5DF7465C263B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{54F00211-E33C-4848-A2B0-5DF7465C263B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{54F00211-E33C-4848-A2B0-5DF7465C263B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54F00211-E33C-4848-A2B0-5DF7465C263B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54F00211-E33C-4848-A2B0-5DF7465C263B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{54F00211-E33C-4848-A2B0-5DF7465C263B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{54F00211-E33C-4848-A2B0-5DF7465C263B}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4182198C-9078-4C6C-BEE4-C36C969C5B54}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://santacatalina.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BarCode\\BarCode.vbproj
+		SccProjectName1 = BarCode
+		SccLocalPath1 = BarCode
+		SccProjectUniqueName2 = BLL\\BLL.vbproj
+		SccProjectName2 = BLL
+		SccLocalPath2 = BLL
+		SccProjectUniqueName3 = DAL\\DAL.vbproj
+		SccProjectName3 = DAL
+		SccLocalPath3 = DAL
+		SccProjectUniqueName4 = Entities\\Entities.vbproj
+		SccProjectName4 = Entities
+		SccLocalPath4 = Entities
+		SccProjectUniqueName5 = MenuSistema\\MenuSistema.csproj
+		SccProjectName5 = MenuSistema
+		SccLocalPath5 = MenuSistema
+		SccProjectUniqueName6 = Seguridad\\Seguridad.vbproj
+		SccProjectName6 = Seguridad
+		SccLocalPath6 = Seguridad
+		SccProjectUniqueName7 = StaCatalina\\StaCatalina.csproj
+		SccProjectName7 = StaCatalina
+		SccLocalPath7 = StaCatalina
+	EndGlobalSection
+EndGlobal

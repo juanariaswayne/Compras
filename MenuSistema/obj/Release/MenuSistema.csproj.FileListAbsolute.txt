@@ -1,0 +1,15 @@
+C:\Proyectos\Compras\MenuSistema\bin\Release\MenuSistema.dll
+C:\Proyectos\Compras\MenuSistema\bin\Release\MenuSistema.pdb
+C:\Proyectos\Compras\MenuSistema\bin\Release\BLL.dll
+C:\Proyectos\Compras\MenuSistema\bin\Release\DAL.dll
+C:\Proyectos\Compras\MenuSistema\bin\Release\Entities.dll
+C:\Proyectos\Compras\MenuSistema\bin\Release\Solar.DataHelper.dll
+C:\Proyectos\Compras\MenuSistema\bin\Release\BLL.pdb
+C:\Proyectos\Compras\MenuSistema\bin\Release\BLL.xml
+C:\Proyectos\Compras\MenuSistema\bin\Release\DAL.pdb
+C:\Proyectos\Compras\MenuSistema\bin\Release\DAL.xml
+C:\Proyectos\Compras\MenuSistema\bin\Release\Entities.pdb
+C:\Proyectos\Compras\MenuSistema\bin\Release\Entities.xml
+C:\Proyectos\Compras\MenuSistema\obj\Release\MenuSistema.csprojResolveAssemblyReference.cache
+C:\Proyectos\Compras\MenuSistema\obj\Release\MenuSistema.dll
+C:\Proyectos\Compras\MenuSistema\obj\Release\MenuSistema.pdb

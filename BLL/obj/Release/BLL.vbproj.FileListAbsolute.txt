@@ -1,0 +1,16 @@
+C:\Proyectos\Compras\BLL\bin\Release\BLL.dll
+C:\Proyectos\Compras\BLL\bin\Release\BLL.pdb
+C:\Proyectos\Compras\BLL\bin\Release\BLL.xml
+C:\Proyectos\Compras\BLL\bin\Release\DAL.dll
+C:\Proyectos\Compras\BLL\bin\Release\Entities.dll
+C:\Proyectos\Compras\BLL\bin\Release\Solar.DataHelper.dll
+C:\Proyectos\Compras\BLL\bin\Release\DAL.pdb
+C:\Proyectos\Compras\BLL\bin\Release\DAL.xml
+C:\Proyectos\Compras\BLL\bin\Release\Entities.pdb
+C:\Proyectos\Compras\BLL\bin\Release\Entities.xml
+C:\Proyectos\Compras\BLL\obj\Release\BLL.vbprojResolveAssemblyReference.cache
+C:\Proyectos\Compras\BLL\obj\Release\BLL.Resources.resources
+C:\Proyectos\Compras\BLL\obj\Release\BLL.vbproj.GenerateResource.Cache
+C:\Proyectos\Compras\BLL\obj\Release\BLL.dll
+C:\Proyectos\Compras\BLL\obj\Release\BLL.xml
+C:\Proyectos\Compras\BLL\obj\Release\BLL.pdb

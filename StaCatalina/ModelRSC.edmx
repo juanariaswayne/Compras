@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SBDARSCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="USR_ArticuloSubCuenta">
+          <Key>
+            <PropertyRef Name="subCuenta" />
+          </Key>
+          <Property Name="subCuenta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Concepto" Type="varchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="USR_ConceptoSubCuenta">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="concepto" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="subCuenta" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="USR_ControlProrrateoEmpresa">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Anio" Type="int" Nullable="false" />
+          <Property Name="Mes" Type="int" Nullable="false" />
+          <Property Name="FechaProrrateoEmpresa" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Function Name="TraeConceptoCtaContable" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="SBDARSCModelStoreContainer">
+          <EntitySet Name="USR_ArticuloSubCuenta" EntityType="Self.USR_ArticuloSubCuenta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USR_ConceptoSubCuenta" EntityType="Self.USR_ConceptoSubCuenta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="USR_ControlProrrateoEmpresa" EntityType="Self.USR_ControlProrrateoEmpresa" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SBDARSCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="USR_ArticuloSubCuenta">
+          <Key>
+            <PropertyRef Name="subCuenta" />
+          </Key>
+          <Property Name="subCuenta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Concepto" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="SBDARSCEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="USR_ArticuloSubCuenta" EntityType="Self.USR_ArticuloSubCuenta" />
+          <EntitySet Name="USR_ConceptoSubCuenta" EntityType="SBDARSCModel.USR_ConceptoSubCuenta" />
+          <FunctionImport Name="TraeConceptoCtaContable" ReturnType="Collection(SBDARSCModel.TraeConceptoCtaContable_Result)" />
+          <EntitySet Name="USR_ControlProrrateoEmpresa" EntityType="SBDARSCModel.USR_ControlProrrateoEmpresa" />
+        </EntityContainer>
+        <EntityType Name="USR_ConceptoSubCuenta">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="concepto" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="subCuenta" Type="Int32" Nullable="false" />
+        </EntityType>
+        <ComplexType Name="TraeConceptoCtaContable_Result">
+          <Property Type="String" Name="con_Cod" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="con_Desc" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="cappla_CuentaCpra" Nullable="false" MaxLength="15" />
+          <Property Type="String" Name="cta_descrip" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="DescripSubCuenta" Nullable="false" MaxLength="100" />
+          <Property Type="Int32" Name="subCuenta" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="USR_ControlProrrateoEmpresa">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FechaProrrateoEmpresa" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Anio" Type="Int32" Nullable="false" />
+          <Property Name="Mes" Type="Int32" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SBDARSCModelStoreContainer" CdmEntityContainer="SBDARSCEntities">
+          <EntitySetMapping Name="USR_ArticuloSubCuenta">
+            <EntityTypeMapping TypeName="SBDARSCModel.USR_ArticuloSubCuenta">
+              <MappingFragment StoreEntitySet="USR_ArticuloSubCuenta">
+                <ScalarProperty Name="Concepto" ColumnName="Concepto" />
+                <ScalarProperty Name="subCuenta" ColumnName="subCuenta" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USR_ConceptoSubCuenta">
+            <EntityTypeMapping TypeName="SBDARSCModel.USR_ConceptoSubCuenta">
+              <MappingFragment StoreEntitySet="USR_ConceptoSubCuenta">
+                <ScalarProperty Name="subCuenta" ColumnName="subCuenta" />
+                <ScalarProperty Name="concepto" ColumnName="concepto" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="TraeConceptoCtaContable" FunctionName="SBDARSCModel.Store.TraeConceptoCtaContable">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="SBDARSCModel.TraeConceptoCtaContable_Result">
+                <ScalarProperty Name="con_Cod" ColumnName="con_Cod" />
+                <ScalarProperty Name="con_Desc" ColumnName="con_Desc" />
+                <ScalarProperty Name="cappla_CuentaCpra" ColumnName="cappla_CuentaCpra" />
+                <ScalarProperty Name="cta_descrip" ColumnName="cta_descrip" />
+                <ScalarProperty Name="DescripSubCuenta" ColumnName="DescripSubCuenta" />
+                <ScalarProperty Name="subCuenta" ColumnName="subCuenta" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="USR_ControlProrrateoEmpresa">
+            <EntityTypeMapping TypeName="SBDARSCModel.USR_ControlProrrateoEmpresa">
+              <MappingFragment StoreEntitySet="USR_ControlProrrateoEmpresa">
+                <ScalarProperty Name="Mes" ColumnName="Mes" />
+                <ScalarProperty Name="Anio" ColumnName="Anio" />
+                <ScalarProperty Name="FechaProrrateoEmpresa" ColumnName="FechaProrrateoEmpresa" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StaCatalinaModelStoreContainer" CdmEntityContainer="StaCatalinaEntities">
+    <EntitySetMapping Name="varEmpresa">
+      <EntityTypeMapping TypeName="StaCatalinaModel.varEmpresa">
+        <MappingFragment StoreEntitySet="varEmpresa">
+          <ScalarProperty Name="codEmp" ColumnName="codEmp" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="REQUERIMIENTOS_INTERNO_PARA_MODIFICAR" FunctionName="StaCatalinaModel.Store.REQUERIMIENTOS_INTERNO_PARA_MODIFICAR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StaCatalinaModel.REQUERIMIENTOS_INTERNO_PARA_MODIFICAR_Result">
+          <ScalarProperty Name="codEmp" ColumnName="codEmp" />
+          <ScalarProperty Name="usuarioAutoriza" ColumnName="usuarioAutoriza" />
+          <ScalarProperty Name="requerimiento_id" ColumnName="requerimiento_id" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="sectorRequerimiento_id" ColumnName="sectorRequerimiento_id" />
+          <ScalarProperty Name="OBS" ColumnName="OBS" />
+          <ScalarProperty Name="depositoOrigen_id" ColumnName="depositoOrigen_id" />
+          <ScalarProperty Name="sectorDepositoOrigen_id" ColumnName="sectorDepositoOrigen_id" />
+          <ScalarProperty Name="depositoDestino_id" ColumnName="depositoDestino_id" />
+          <ScalarProperty Name="sectorDepositoDestino_id" ColumnName="sectorDepositoDestino_id" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="TraeRequerimientoInternoItem" FunctionName="StaCatalinaModel.Store.TraeRequerimientoInternoItem">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StaCatalinaModel.TraeRequerimientoInternoItem_Result">
+          <ScalarProperty Name="codEmp" ColumnName="codEmp" />
+          <ScalarProperty Name="requerimiento_id" ColumnName="requerimiento_id" />
+          <ScalarProperty Name="nroItem" ColumnName="nroItem" />
+          <ScalarProperty Name="art_DescGen" ColumnName="art_DescGen" />
+          <ScalarProperty Name="articulo_id" ColumnName="articulo_id" />
+          <ScalarProperty Name="uniMed" ColumnName="uniMed" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="nivelAut_id" ColumnName="nivelAut_id" />
+          <ScalarProperty Name="fechaEntrega" ColumnName="fechaEntrega" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ACTUALIZA_OBS_REQ_INTERNO" FunctionName="StaCatalinaModel.Store.ACTUALIZA_OBS_REQ_INTERNO" />
+    <FunctionImportMapping FunctionImportName="ORDENCOMPRA_PARA_MODIFICAR_FECHA_BUSCADOR" FunctionName="StaCatalinaModel.Store.ORDENCOMPRA_PARA_MODIFICAR_FECHA_BUSCADOR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StaCatalinaModel.ORDENCOMPRA_PARA_MODIFICAR_FECHA_BUSCADOR_Result">
+          <ScalarProperty Name="codEmp" ColumnName="codEmp" />
+          <ScalarProperty Name="ordenCompra_id" ColumnName="ordenCompra_id" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="proveed_id" ColumnName="proveed_id" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+          <ScalarProperty Name="estado_id" ColumnName="estado_id" />
+          <ScalarProperty Name="tipoOc_id" ColumnName="tipoOc_id" />
+          <ScalarProperty Name="modificaCosto" ColumnName="modificaCosto" />
+          <ScalarProperty Name="condicionPago_id" ColumnName="condicionPago_id" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="usuarioAutoriza" ColumnName="usuarioAutoriza" />
+          <ScalarProperty Name="pedidoDiario" ColumnName="pedidoDiario" />
+          <ScalarProperty Name="sectorEntrega_id" ColumnName="sectorEntrega_id" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ORDENCOMPRA_PENDIENTES_DE_ENTREGA_BUSCADOR" FunctionName="StaCatalinaModel.Store.ORDENCOMPRA_PENDIENTES_DE_ENTREGA_BUSCADOR">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StaCatalinaModel.ORDENCOMPRA_PENDIENTES_DE_ENTREGA_BUSCADOR_Result">
+          <ScalarProperty Name="codEmp" ColumnName="codEmp" />
+          <ScalarProperty Name="ordenCompra_id" ColumnName="ordenCompra_id" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="proveed_id" ColumnName="proveed_id" />
+          <ScalarProperty Name="sectorRequerimiento_id" ColumnName="sectorRequerimiento_id" />
+          <ScalarProperty Name="estado_id" ColumnName="estado_id" />
+          <ScalarProperty Name="tipoOc_id" ColumnName="tipoOc_id" />
+          <ScalarProperty Name="modificaCosto" ColumnName="modificaCosto" />
+          <ScalarProperty Name="condicionPago_id" ColumnName="condicionPago_id" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="usuarioAutoriza" ColumnName="usuarioAutoriza" />
+          <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+          <ScalarProperty Name="pedidoDiario" ColumnName="pedidoDiario" />
+          <ScalarProperty Name="sectorEntrega_id" ColumnName="sectorEntrega_id" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="OrdenCompra_Indicador_Mensual" FunctionName="StaCatalinaModel.Store.OrdenCompra_Indicador_Mensual" />
+    <FunctionImportMapping FunctionImportName="OrdenCompraAbierta_SegunFacturaBejerman" FunctionName="StaCatalinaModel.Store.OrdenCompraAbierta_SegunFacturaBejerman">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StaCatalinaModel.OrdenCompraAbierta_SegunFacturaBejerman_Result">
+          <ScalarProperty Name="codEmp" ColumnName="codEmp" />
+          <ScalarProperty Name="ordenCompra_id" ColumnName="ordenCompra_id" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="proveed_id" ColumnName="proveed_id" />
+          <ScalarProperty Name="razonSocial" ColumnName="razonSocial" />
+          <ScalarProperty Name="nroItem" ColumnName="nroItem" />
+          <ScalarProperty Name="articulo_id" ColumnName="articulo_id" />
+          <ScalarProperty Name="prodDescrip" ColumnName="prodDescrip" />
+          <ScalarProperty Name="uniMed" ColumnName="uniMed" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="F_FEmision" ColumnName="F_FEmision" />
+          <ScalarProperty Name="F_FContab" ColumnName="F_FContab" />
+          <ScalarProperty Name="F_Letra" ColumnName="F_Letra" />
+          <ScalarProperty Name="F_CodigoComprob" ColumnName="F_CodigoComprob" />
+          <ScalarProperty Name="F_Comprobante" ColumnName="F_Comprobante" />
+          <ScalarProperty Name="F_CodProducto" ColumnName="F_CodProducto" />
+          <ScalarProperty Name="F_nroItem" ColumnName="F_nroItem" />
+          <ScalarProperty Name="F_uniMed" ColumnName="F_uniMed" />
+          <ScalarProperty Name="F_Cantidad" ColumnName="F_Cantidad" />
+          <ScalarProperty Name="F_Precio" ColumnName="F_Precio" />
+          <ScalarProperty Name="PorcentBonif" ColumnName="PorcentBonif" />
+          <ScalarProperty Name="PrecioFinal" ColumnName="PrecioFinal" />
+          <ScalarProperty Name="fechaFinaliz_Anulacion" ColumnName="fechaFinaliz_Anulacion" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="pedidoDiario" ColumnName="pedidoDiario" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="CtaContable" FunctionName="StaCatalinaModel.Store.CtaContable">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StaCatalinaModel.CtaContable_Result">
+          <ScalarProperty Name="com_valor" ColumnName="com_valor" />
+          <ScalarProperty Name="cta_nrocta" ColumnName="cta_nrocta" />
+          <ScalarProperty Name="cta_descrip" ColumnName="cta_descrip" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="H_CondPagoProveed" FunctionName="StaCatalinaModel.Store.H_CondPagoProveed">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StaCatalinaModel.H_CondPagoProveed_Result">
+          <ScalarProperty Name="CondPago" ColumnName="CondPago" />
+          <ScalarProperty Name="cpg_Desc" ColumnName="cpg_Desc" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ExcluyeItemsReqInterno" FunctionName="StaCatalinaModel.Store.ExcluyeItemsReqInterno" />
+    <EntitySetMapping Name="stkMoviReqInterno">
+      <EntityTypeMapping TypeName="StaCatalinaModel.stkMoviReqInterno">
+        <MappingFragment StoreEntitySet="stkMoviReqInterno">
+          <ScalarProperty Name="remComprobante" ColumnName="remComprobante" />
+          <ScalarProperty Name="remSucursal" ColumnName="remSucursal" />
+          <ScalarProperty Name="cantEnviada" ColumnName="cantEnviada" />
+          <ScalarProperty Name="uniMed" ColumnName="uniMed" />
+          <ScalarProperty Name="nroItem" ColumnName="nroItem" />
+          <ScalarProperty Name="requerimiento_id" ColumnName="requerimiento_id" />
+          <ScalarProperty Name="codEmp" ColumnName="codEmp" />
+          <ScalarProperty Name="nroItemStk" ColumnName="nroItemStk" />
+          <ScalarProperty Name="comprobanteStk" ColumnName="comprobanteStk" />
+          <ScalarProperty Name="codEmpStk" ColumnName="codEmpStk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="comRequerimientoInterno">
+      <EntityTypeMapping TypeName="StaCatalinaModel.comRequerimientoInterno">
+        <MappingFragment StoreEntitySet="comRequerimientoInterno">
+          <ScalarProperty Name="sectorDepositoDestino_id" ColumnName="sectorDepositoDestino_id" />
+          <ScalarProperty Name="depositoDestino_id" ColumnName="depositoDestino_id" />
+          <ScalarProperty Name="sectorDepositoOrigen_id" ColumnName="sectorDepositoOrigen_id" />
+          <ScalarProperty Name="depositoOrigen_id" ColumnName="depositoOrigen_id" />
+          <ScalarProperty Name="usuarioFinaliza" ColumnName="usuarioFinaliza" />
+          <ScalarProperty Name="motivoFinalizacion" ColumnName="motivoFinalizacion" />
+          <ScalarProperty Name="fechaFinalizacion" ColumnName="fechaFinalizacion" />
+          <ScalarProperty Name="sectorEntrega_id" ColumnName="sectorEntrega_id" />
+          <ScalarProperty Name="pedidoDiario" ColumnName="pedidoDiario" />
+          <ScalarProperty Name="motivoAnulacion" ColumnName="motivoAnulacion" />
+          <ScalarProperty Name="fechaAutorizacion" ColumnName="fechaAutorizacion" />
+          <ScalarProperty Name="usuarioAutoriza" ColumnName="usuarioAutoriza" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="estado_id" ColumnName="estado_id" />
+          <ScalarProperty Name="sectorRequerimiento_id" ColumnName="sectorRequerimiento_id" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="requerimiento_id" ColumnName="requerimiento_id" />
+          <ScalarProperty Name="codEmp" ColumnName="codEmp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="comRequerimientoInternoItem">
+      <EntityTypeMapping TypeName="StaCatalinaModel.comRequerimientoInternoItem">
+        <MappingFragment StoreEntitySet="comRequerimientoInternoItem">
+          <ScalarProperty Name="usuarioExcluye" ColumnName="usuarioExcluye" />
+          <ScalarProperty Name="motivoExclusion" ColumnName="motivoExclusion" />
+          <ScalarProperty Name="excluido" ColumnName="excluido" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="fechaEntrega" ColumnName="fechaEntrega" />
+          <ScalarProperty Name="nivelAut_id" ColumnName="nivelAut_id" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="uniMed" ColumnName="uniMed" />
+          <ScalarProperty Name="articulo_id" ColumnName="articulo_id" />
+          <ScalarProperty Name="nroItem" ColumnName="nroItem" />
+          <ScalarProperty Name="requerimiento_id" ColumnName="requerimiento_id" />
+          <ScalarProperty Name="codEmp" ColumnName="codEmp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="FinalizaRequerimientoInterno" FunctionName="StaCatalinaModel.Store.FinalizaRequerimientoInterno" />
+    <EntitySetMapping Name="comUsuarioEnviaMail">
+      <EntityTypeMapping TypeName="StaCatalinaModel.comUsuarioEnviaMail">
+        <MappingFragment StoreEntitySet="comUsuarioEnviaMail">
+          <ScalarProperty Name="Id_Usuario_EnviaMail" ColumnName="Id_Usuario_EnviaMail" />
+          <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Usuarios">
+      <EntityTypeMapping TypeName="StaCatalinaModel.TBL_Usuarios">
+        <MappingFragment StoreEntitySet="TBL_Usuarios">
+          <ScalarProperty Name="Empresa" ColumnName="Empresa" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Sector_id" ColumnName="Sector_id" />
+          <ScalarProperty Name="Inactivo" ColumnName="Inactivo" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="ContraseniaUsuario" ColumnName="ContraseniaUsuario" />
+          <ScalarProperty Name="IdentificadorUsuario" ColumnName="IdentificadorUsuario" />
+          <ScalarProperty Name="Id_Perfil" ColumnName="Id_Perfil" />
+          <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="comOrdenCompra">
+      <EntityTypeMapping TypeName="StaCatalinaModel.comOrdenCompra">
+        <MappingFragment StoreEntitySet="comOrdenCompra">
+          <ScalarProperty Name="tipoProrrateo" ColumnName="tipoProrrateo" />
+          <ScalarProperty Name="sectorEntrega_id" ColumnName="sectorEntrega_id" />
+          <ScalarProperty Name="proveed_Original" ColumnName="proveed_Original" />
+          <ScalarProperty Name="pedidoDiario" ColumnName="pedidoDiario" />
+          <ScalarProperty Name="fechaFinaliz_Anulacion" ColumnName="fechaFinaliz_Anulacion" />
+          <ScalarProperty Name="motivoFinaliz_Anulacion" ColumnName="motivoFinaliz_Anulacion" />
+          <ScalarProperty Name="fechaAutorizacion" ColumnName="fechaAutorizacion" />
+          <ScalarProperty Name="PDC" ColumnName="PDC" />
+          <ScalarProperty Name="usuarioAutoriza" ColumnName="usuarioAutoriza" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="condicionPago_id" ColumnName="condicionPago_id" />
+          <ScalarProperty Name="modificaCosto" ColumnName="modificaCosto" />
+          <ScalarProperty Name="tipoOc_id" ColumnName="tipoOc_id" />
+          <ScalarProperty Name="estado_id" ColumnName="estado_id" />
+          <ScalarProperty Name="sectorRequerimiento_id" ColumnName="sectorRequerimiento_id" />
+          <ScalarProperty Name="proveed_id" ColumnName="proveed_id" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="requerimiento_id" ColumnName="requerimiento_id" />
+          <ScalarProperty Name="codEmpRequerimiento" ColumnName="codEmpRequerimiento" />
+          <ScalarProperty Name="ordenCompra_id" ColumnName="ordenCompra_id" />
+          <ScalarProperty Name="codEmp" ColumnName="codEmp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="comRequerimientoItem">
+      <EntityTypeMapping TypeName="StaCatalinaModel.comRequerimientoItem">
+        <MappingFragment StoreEntitySet="comRequerimientoItem">
+          <ScalarProperty Name="usuarioExcluye" ColumnName="usuarioExcluye" />
+          <ScalarProperty Name="motivoExclusion" ColumnName="motivoExclusion" />
+          <ScalarProperty Name="excluido" ColumnName="excluido" />
+          <ScalarProperty Name="marca" ColumnName="marca" />
+          <ScalarProperty Name="fechaEntrega" ColumnName="fechaEntrega" />
+          <ScalarProperty Name="nivelAut_id" ColumnName="nivelAut_id" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="uniMed" ColumnName="uniMed" />
+          <ScalarProperty Name="articulo_id" ColumnName="articulo_id" />
+          <ScalarProperty Name="nroItem" ColumnName="nroItem" />
+          <ScalarProperty Name="requerimiento_id" ColumnName="requerimiento_id" />
+          <ScalarProperty Name="codEmp" ColumnName="codEmp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="TraeProveedorEmpresa" FunctionName="StaCatalinaModel.Store.TraeProveedorEmpresa">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StaCatalinaModel.TraeProveedorEmpresa_Result">
+          <ScalarProperty Name="codEmp" ColumnName="codEmp" />
+          <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ActualizaMailProveedor" FunctionName="StaCatalinaModel.Store.ActualizaMailProveedor" />
+    <EntitySetMapping Name="comOrdenCompraDetalle">
+      <EntityTypeMapping TypeName="StaCatalinaModel.comOrdenCompraDetalle">
+        <MappingFragment StoreEntitySet="comOrdenCompraDetalle">
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="detalle" ColumnName="detalle" />
+          <ScalarProperty Name="importe" ColumnName="importe" />
+          <ScalarProperty Name="nivelAuto_id" ColumnName="nivelAuto_id" />
+          <ScalarProperty Name="nroItem" ColumnName="nroItem" />
+          <ScalarProperty Name="ordenCompra_id" ColumnName="ordenCompra_id" />
+          <ScalarProperty Name="codEmp" ColumnName="codEmp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ordenCompraSinStock_ParaModificar" FunctionName="StaCatalinaModel.Store.ordenCompraSinStock_ParaModificar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="StaCatalinaModel.ordenCompraSinStock_ParaModificar_Result">
+          <ScalarProperty Name="codEmp" ColumnName="codEmp" />
+          <ScalarProperty Name="ordenCompra_id" ColumnName="ordenCompra_id" />
+          <ScalarProperty Name="proveed_id" ColumnName="proveed_id" />
+          <ScalarProperty Name="RazonSocial" ColumnName="RazonSocial" />
+          <ScalarProperty Name="Obs" ColumnName="Obs" />
+          <ScalarProperty Name="sectorEntrega_id" ColumnName="sectorEntrega_id" />
+          <ScalarProperty Name="nroitem" ColumnName="nroitem" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="importe" ColumnName="importe" />
+          <ScalarProperty Name="detalle" ColumnName="detalle" />
+          <ScalarProperty Name="fechaAutorizacion" ColumnName="fechaAutorizacion" />
+          <ScalarProperty Name="usuarioAutoriza" ColumnName="usuarioAutoriza" />
+          <ScalarProperty Name="tipoProrrateo" ColumnName="tipoProrrateo" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BLLModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="stkMoviReqInterno">
+    <Key>
+      <PropertyRef Name="codEmpStk" />
+      <PropertyRef Name="comprobanteStk" />
+      <PropertyRef Name="nroItemStk" />
+      <PropertyRef Name="codEmp" />
+      <PropertyRef Name="requerimiento_id" />
+      <PropertyRef Name="nroItem" />
+    </Key>
+    <Property Name="codEmpStk" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="comprobanteStk" Type="Int32" Nullable="false" />
+    <Property Name="nroItemStk" Type="Int32" Nullable="false" />
+    <Property Name="codEmp" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="requerimiento_id" Type="Int32" Nullable="false" />
+    <Property Name="nroItem" Type="Int32" Nullable="false" />
+    <Property Name="uniMed" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cantEnviada" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="remSucursal" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="remComprobante" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="BLLEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="stkMoviReqInterno" EntityType="Self.stkMoviReqInterno" />
+    <FunctionImport Name="ExisteItemMoviReqInterno" ReturnType="Collection(BLLModel.ExisteItemMoviReqInterno_Result)">
+      <Parameter Name="codEmp" Mode="In" Type="String" />
+      <Parameter Name="requerimiento_id" Mode="In" Type="Int32" />
+      <Parameter Name="nroItem" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="comOrdenCompra" EntityType="BLLModel.comOrdenCompra" />
+    <EntitySet Name="comOrdenCompraDetalle" EntityType="BLLModel.comOrdenCompraDetalle" />
+    <AssociationSet Name="FK_comOrdenCompraDetalle_comOrdenCompra" Association="BLLModel.FK_comOrdenCompraDetalle_comOrdenCompra">
+      <End Role="comOrdenCompra" EntitySet="comOrdenCompra" />
+      <End Role="comOrdenCompraDetalle" EntitySet="comOrdenCompraDetalle" />
+    </AssociationSet>
+  </EntityContainer>
+  <ComplexType Name="ExisteItemMoviReqInterno_Result">
+    <Property Type="String" Name="remSucursal" Nullable="false" MaxLength="4" />
+    <Property Type="Int32" Name="remComprobante" Nullable="false" />
+    <Property Type="Decimal" Name="cantEnviada" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="String" Name="uniMed" Nullable="false" MaxLength="20" />
+  </ComplexType>
+  <EntityType Name="comOrdenCompra">
+    <Key>
+      <PropertyRef Name="codEmp" />
+      <PropertyRef Name="ordenCompra_id" />
+    </Key>
+    <Property Name="codEmp" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ordenCompra_id" Type="Int32" Nullable="false" />
+    <Property Name="codEmpRequerimiento" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="requerimiento_id" Type="Int32" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="proveed_id" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="sectorRequerimiento_id" Type="Int32" />
+    <Property Name="estado_id" Type="Int32" Nullable="false" />
+    <Property Name="tipoOc_id" Type="Int32" Nullable="false" />
+    <Property Name="modificaCosto" Type="Int32" Nullable="false" />
+    <Property Name="condicionPago_id" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="obs" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="usuario" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="usuarioAutoriza" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PDC" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="fechaAutorizacion" Type="DateTime" Precision="3" />
+    <Property Name="motivoFinaliz_Anulacion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="fechaFinaliz_Anulacion" Type="DateTime" Precision="3" />
+    <Property Name="pedidoDiario" Type="Boolean" />
+    <Property Name="proveed_Original" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="sectorEntrega_id" Type="Int32" />
+    <Property Name="tipoProrrateo" Type="Int16" />
+    <NavigationProperty Name="comOrdenCompraDetalle" Relationship="BLLModel.FK_comOrdenCompraDetalle_comOrdenCompra" FromRole="comOrdenCompra" ToRole="comOrdenCompraDetalle" />
+  </EntityType>
+  <EntityType Name="comOrdenCompraDetalle">
+    <Key>
+      <PropertyRef Name="codEmp" />
+      <PropertyRef Name="ordenCompra_id" />
+      <PropertyRef Name="nroItem" />
+    </Key>
+    <Property Name="codEmp" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ordenCompra_id" Type="Int32" Nullable="false" />
+    <Property Name="nroItem" Type="Int32" Nullable="false" />
+    <Property Name="nivelAuto_id" Type="Int32" Nullable="false" />
+    <Property Name="importe" Type="Double" Nullable="false" />
+    <Property Name="detalle" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="cantidad" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="comOrdenCompra" Relationship="BLLModel.FK_comOrdenCompraDetalle_comOrdenCompra" FromRole="comOrdenCompraDetalle" ToRole="comOrdenCompra" />
+  </EntityType>
+  <Association Name="FK_comOrdenCompraDetalle_comOrdenCompra">
+    <End Type="BLLModel.comOrdenCompra" Role="comOrdenCompra" Multiplicity="1" />
+    <End Type="BLLModel.comOrdenCompraDetalle" Role="comOrdenCompraDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="comOrdenCompra">
+        <PropertyRef Name="codEmp" />
+        <PropertyRef Name="ordenCompra_id" />
+      </Principal>
+      <Dependent Role="comOrdenCompraDetalle">
+        <PropertyRef Name="codEmp" />
+        <PropertyRef Name="ordenCompra_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

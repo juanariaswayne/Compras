@@ -1,0 +1,13 @@
+C:\Proyectos\Compras\DAL\bin\Release\DAL.dll
+C:\Proyectos\Compras\DAL\bin\Release\DAL.pdb
+C:\Proyectos\Compras\DAL\bin\Release\DAL.xml
+C:\Proyectos\Compras\DAL\bin\Release\Entities.dll
+C:\Proyectos\Compras\DAL\bin\Release\Solar.DataHelper.dll
+C:\Proyectos\Compras\DAL\bin\Release\Entities.pdb
+C:\Proyectos\Compras\DAL\bin\Release\Entities.xml
+C:\Proyectos\Compras\DAL\obj\Release\DAL.vbprojResolveAssemblyReference.cache
+C:\Proyectos\Compras\DAL\obj\Release\DAL.Resources.resources
+C:\Proyectos\Compras\DAL\obj\Release\DAL.vbproj.GenerateResource.Cache
+C:\Proyectos\Compras\DAL\obj\Release\DAL.dll
+C:\Proyectos\Compras\DAL\obj\Release\DAL.xml
+C:\Proyectos\Compras\DAL\obj\Release\DAL.pdb

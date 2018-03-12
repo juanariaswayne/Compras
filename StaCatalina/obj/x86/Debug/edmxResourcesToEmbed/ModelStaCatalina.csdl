@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StaCatalinaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="varEmpresa">
+    <Key>
+      <PropertyRef Name="codEmp" />
+    </Key>
+    <Property Name="codEmp" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="StaCatalinaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="varEmpresa" EntityType="Self.varEmpresa" />
+    <FunctionImport Name="REQUERIMIENTOS_INTERNO_PARA_MODIFICAR" ReturnType="Collection(StaCatalinaModel.REQUERIMIENTOS_INTERNO_PARA_MODIFICAR_Result)">
+      <Parameter Name="Sector" Mode="In" Type="Int32" />
+      <Parameter Name="idUsuario" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="TraeRequerimientoInternoItem" ReturnType="Collection(StaCatalinaModel.TraeRequerimientoInternoItem_Result)">
+      <Parameter Name="codEmp" Mode="In" Type="String" />
+      <Parameter Name="requerimiento_id" Mode="In" Type="Int32" />
+      <Parameter Name="nivelAut_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ACTUALIZA_OBS_REQ_INTERNO">
+      <Parameter Name="codEmp" Mode="In" Type="String" />
+      <Parameter Name="nro" Mode="In" Type="Int32" />
+      <Parameter Name="obs" Mode="In" Type="String" />
+      <Parameter Name="DepositoOrigenId" Mode="In" Type="Int32" />
+      <Parameter Name="SectorDepositoOrigenId" Mode="In" Type="Int32" />
+      <Parameter Name="DepositoDestinoId" Mode="In" Type="Int32" />
+      <Parameter Name="SectorDepositoDestinoId" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ORDEN_COMPRA_ABIERTAS" ReturnType="Collection(StaCatalinaModel.ORDEN_COMPRA_ABIERTAS_Result)">
+      <Parameter Name="Dias" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="TraeOrdenCompraItem_OC_Abiertas" ReturnType="Collection(StaCatalinaModel.TraeOrdenCompraItem_OC_Abiertas_Result)">
+      <Parameter Name="codEmp" Mode="In" Type="String" />
+      <Parameter Name="ordenCompra_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ORDENCOMPRA_PARA_MODIFICAR_FECHA_BUSCADOR" ReturnType="Collection(StaCatalinaModel.ORDENCOMPRA_PARA_MODIFICAR_FECHA_BUSCADOR_Result)">
+      <Parameter Name="codEmp" Mode="In" Type="String" />
+      <Parameter Name="Nro" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ORDENCOMPRA_PENDIENTES_DE_ENTREGA_BUSCADOR" ReturnType="Collection(StaCatalinaModel.ORDENCOMPRA_PENDIENTES_DE_ENTREGA_BUSCADOR_Result)">
+      <Parameter Name="codEmp" Mode="In" Type="String" />
+      <Parameter Name="Nro" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="OrdenCompra_Indicador_Mensual">
+      <Parameter Name="Empresa" Mode="In" Type="String" />
+      <Parameter Name="Anio" Mode="In" Type="Int32" />
+      <Parameter Name="Mes" Mode="In" Type="Int32" />
+      <Parameter Name="Dias" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="OrdenCompraAbierta_SegunFacturaBejerman" ReturnType="Collection(StaCatalinaModel.OrdenCompraAbierta_SegunFacturaBejerman_Result)">
+      <Parameter Name="Empresa" Mode="In" Type="String" />
+      <Parameter Name="Dias" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="CtaContable" ReturnType="Collection(StaCatalinaModel.CtaContable_Result)" />
+    <FunctionImport Name="H_CondPagoProveed" ReturnType="Collection(StaCatalinaModel.H_CondPagoProveed_Result)">
+      <Parameter Name="codEmp" Mode="In" Type="String" />
+      <Parameter Name="Proveed" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ExcluyeItemsReqInterno">
+      <Parameter Name="codEmp" Mode="In" Type="String" />
+      <Parameter Name="idReq" Mode="In" Type="Int32" />
+      <Parameter Name="nroItem" Mode="In" Type="Int32" />
+      <Parameter Name="Motivo" Mode="In" Type="String" />
+      <Parameter Name="usuario" Mode="In" Type="String" />
+      <Parameter Name="excluido" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <EntitySet Name="stkMoviReqInterno" EntityType="StaCatalinaModel.stkMoviReqInterno" />
+    <EntitySet Name="comRequerimientoInterno" EntityType="StaCatalinaModel.comRequerimientoInterno" />
+    <EntitySet Name="comRequerimientoInternoItem" EntityType="StaCatalinaModel.comRequerimientoInternoItem" />
+    <AssociationSet Name="FK_comRequerimientoInternoItem_comRequerimiento" Association="StaCatalinaModel.FK_comRequerimientoInternoItem_comRequerimiento">
+      <End Role="comRequerimientoInterno" EntitySet="comRequerimientoInterno" />
+      <End Role="comRequerimientoInternoItem" EntitySet="comRequerimientoInternoItem" />
+    </AssociationSet>
+    <FunctionImport Name="FinalizaRequerimientoInterno">
+      <Parameter Name="codEmp" Mode="In" Type="String" />
+      <Parameter Name="requerimiento_id" Mode="In" Type="Int32" />
+      <Parameter Name="motivo" Mode="In" Type="String" />
+      <Parameter Name="fechaFinalizacion" Mode="In" Type="DateTime" />
+      <Parameter Name="usuarioFinaliza" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="comUsuarioEnviaMail" EntityType="StaCatalinaModel.comUsuarioEnviaMail" />
+    <EntitySet Name="TBL_Usuarios" EntityType="StaCatalinaModel.TBL_Usuarios" />
+    <AssociationSet Name="FK_comUsuarioEnviaMail_TBL_Usuarios" Association="StaCatalinaModel.FK_comUsuarioEnviaMail_TBL_Usuarios">
+      <End Role="TBL_Usuarios" EntitySet="TBL_Usuarios" />
+      <End Role="comUsuarioEnviaMail" EntitySet="comUsuarioEnviaMail" />
+    </AssociationSet>
+    <EntitySet Name="comOrdenCompra" EntityType="StaCatalinaModel.comOrdenCompra" />
+    <EntitySet Name="comRequerimientoItem" EntityType="StaCatalinaModel.comRequerimientoItem" />
+    <FunctionImport Name="TraeProveedorEmpresa" IsComposable="true" ReturnType="Collection(StaCatalinaModel.TraeProveedorEmpresa_Result)">
+      <Parameter Name="codEmp" Mode="In" Type="String" />
+      <Parameter Name="Proveed" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ActualizaMailProveedor">
+      <Parameter Name="codEmp" Mode="In" Type="String" />
+      <Parameter Name="proveed" Mode="In" Type="String" />
+      <Parameter Name="mail" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="comOrdenCompraDetalle" EntityType="StaCatalinaModel.comOrdenCompraDetalle" />
+    <AssociationSet Name="FK_comOrdenCompraDetalle_comOrdenCompra" Association="StaCatalinaModel.FK_comOrdenCompraDetalle_comOrdenCompra">
+      <End Role="comOrdenCompra" EntitySet="comOrdenCompra" />
+      <End Role="comOrdenCompraDetalle" EntitySet="comOrdenCompraDetalle" />
+    </AssociationSet>
+    <FunctionImport Name="ordenCompraSinStock_ParaModificar" ReturnType="Collection(StaCatalinaModel.ordenCompraSinStock_ParaModificar_Result)">
+      <Parameter Name="codEmp" Mode="In" Type="String" />
+      <Parameter Name="ordenCompra_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="REQUERIMIENTOS_INTERNO_PARA_MODIFICAR_Result">
+    <Property Type="String" Name="codEmp" Nullable="false" MaxLength="4" />
+    <Property Type="String" Name="usuarioAutoriza" Nullable="true" MaxLength="20" />
+    <Property Type="Int32" Name="requerimiento_id" Nullable="false" />
+    <Property Type="DateTime" Name="fecha" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="sectorRequerimiento_id" Nullable="false" />
+    <Property Type="String" Name="OBS" Nullable="false" MaxLength="Max" />
+    <Property Type="Int32" Name="depositoOrigen_id" Nullable="true" />
+    <Property Type="Int32" Name="sectorDepositoOrigen_id" Nullable="true" />
+    <Property Type="Int32" Name="depositoDestino_id" Nullable="true" />
+    <Property Type="Int32" Name="sectorDepositoDestino_id" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="TraeRequerimientoInternoItem_Result">
+    <Property Type="String" Name="codEmp" Nullable="false" MaxLength="4" />
+    <Property Type="Int32" Name="requerimiento_id" Nullable="false" />
+    <Property Type="Int32" Name="nroItem" Nullable="false" />
+    <Property Type="String" Name="art_DescGen" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="articulo_id" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="uniMed" Nullable="false" MaxLength="20" />
+    <Property Type="Decimal" Name="cantidad" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Int32" Name="nivelAut_id" Nullable="false" />
+    <Property Type="DateTime" Name="fechaEntrega" Nullable="false" Precision="23" />
+    <Property Type="String" Name="marca" Nullable="false" MaxLength="60" />
+  </ComplexType>
+  <ComplexType Name="ORDEN_COMPRA_ABIERTAS_Result">
+    <Property Type="String" Name="codEmp" Nullable="false" MaxLength="4" />
+    <Property Type="Int32" Name="ordenCompra_id" Nullable="false" />
+    <Property Type="DateTime" Name="fecha" Nullable="false" Precision="23" />
+    <Property Type="String" Name="proveed_id" Nullable="false" MaxLength="6" />
+    <Property Type="Int32" Name="sectorRequerimiento_id" Nullable="true" />
+    <Property Type="Int32" Name="estado_id" Nullable="false" />
+    <Property Type="Int32" Name="tipoOc_id" Nullable="false" />
+    <Property Type="Int32" Name="modificaCosto" Nullable="false" />
+    <Property Type="String" Name="condicionPago_id" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="obs" Nullable="false" MaxLength="Max" />
+    <Property Type="String" Name="usuario" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="usuarioAutoriza" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="RazonSocial" Nullable="true" MaxLength="40" />
+    <Property Type="Boolean" Name="pedidoDiario" Nullable="true" />
+    <Property Type="Int32" Name="sectorEntrega_id" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="TraeOrdenCompraItem_OC_Abiertas_Result">
+    <Property Type="String" Name="codEmp" Nullable="false" MaxLength="4" />
+    <Property Type="Int32" Name="ordenCompra_id" Nullable="false" />
+    <Property Type="Int32" Name="nroItem" Nullable="false" />
+    <Property Type="String" Name="art_codGen" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="art_DescGen" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="articulo_id" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="uniMed" Nullable="false" MaxLength="20" />
+    <Property Type="Decimal" Name="cantidad" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="precio" Nullable="false" Precision="18" Scale="2" />
+  </ComplexType>
+  <ComplexType Name="ORDENCOMPRA_PARA_MODIFICAR_FECHA_BUSCADOR_Result">
+    <Property Type="String" Name="codEmp" Nullable="false" MaxLength="4" />
+    <Property Type="Int32" Name="ordenCompra_id" Nullable="false" />
+    <Property Type="DateTime" Name="fecha" Nullable="false" Precision="23" />
+    <Property Type="String" Name="proveed_id" Nullable="false" MaxLength="6" />
+    <Property Type="String" Name="obs" Nullable="false" MaxLength="Max" />
+    <Property Type="String" Name="RazonSocial" Nullable="true" MaxLength="40" />
+    <Property Type="Int32" Name="estado_id" Nullable="false" />
+    <Property Type="Int32" Name="tipoOc_id" Nullable="false" />
+    <Property Type="Int32" Name="modificaCosto" Nullable="false" />
+    <Property Type="String" Name="condicionPago_id" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="usuario" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="Email" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="usuarioAutoriza" Nullable="true" MaxLength="20" />
+    <Property Type="Boolean" Name="pedidoDiario" Nullable="true" />
+    <Property Type="Int32" Name="sectorEntrega_id" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="ORDENCOMPRA_PENDIENTES_DE_ENTREGA_BUSCADOR_Result">
+    <Property Type="String" Name="codEmp" Nullable="false" MaxLength="4" />
+    <Property Type="Int32" Name="ordenCompra_id" Nullable="false" />
+    <Property Type="DateTime" Name="fecha" Nullable="false" Precision="23" />
+    <Property Type="String" Name="proveed_id" Nullable="false" MaxLength="6" />
+    <Property Type="Int32" Name="sectorRequerimiento_id" Nullable="true" />
+    <Property Type="Int32" Name="estado_id" Nullable="false" />
+    <Property Type="Int32" Name="tipoOc_id" Nullable="false" />
+    <Property Type="Int32" Name="modificaCosto" Nullable="false" />
+    <Property Type="String" Name="condicionPago_id" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="obs" Nullable="false" MaxLength="Max" />
+    <Property Type="String" Name="usuario" Nullable="false" MaxLength="20" />
+    <Property Type="String" Name="usuarioAutoriza" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="RazonSocial" Nullable="true" MaxLength="40" />
+    <Property Type="Boolean" Name="pedidoDiario" Nullable="true" />
+    <Property Type="Int32" Name="sectorEntrega_id" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="OrdenCompraAbierta_SegunFacturaBejerman_Result">
+    <Property Type="String" Name="codEmp" Nullable="true" MaxLength="4" />
+    <Property Type="Int32" Name="ordenCompra_id" Nullable="true" />
+    <Property Type="DateTime" Name="fecha" Nullable="true" Precision="23" />
+    <Property Type="String" Name="proveed_id" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="razonSocial" Nullable="true" MaxLength="150" />
+    <Property Type="Int16" Name="nroItem" Nullable="true" />
+    <Property Type="String" Name="articulo_id" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="prodDescrip" Nullable="true" MaxLength="150" />
+    <Property Type="String" Name="uniMed" Nullable="true" MaxLength="4" />
+    <Property Type="Double" Name="cantidad" Nullable="true" />
+    <Property Type="Double" Name="precio" Nullable="true" />
+    <Property Type="DateTime" Name="F_FEmision" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="F_FContab" Nullable="true" Precision="23" />
+    <Property Type="String" Name="F_Letra" Nullable="true" MaxLength="1" />
+    <Property Type="String" Name="F_CodigoComprob" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="F_Comprobante" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="F_CodProducto" Nullable="true" MaxLength="20" />
+    <Property Type="Int16" Name="F_nroItem" Nullable="true" />
+    <Property Type="String" Name="F_uniMed" Nullable="true" MaxLength="4" />
+    <Property Type="Double" Name="F_Cantidad" Nullable="true" />
+    <Property Type="Double" Name="F_Precio" Nullable="true" />
+    <Property Type="Double" Name="PorcentBonif" Nullable="true" />
+    <Property Type="Double" Name="PrecioFinal" Nullable="true" />
+    <Property Type="DateTime" Name="fechaFinaliz_Anulacion" Nullable="true" Precision="23" />
+    <Property Type="String" Name="usuario" Nullable="true" MaxLength="20" />
+    <Property Type="Boolean" Name="pedidoDiario" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="CtaContable_Result">
+    <Property Type="String" Name="com_valor" Nullable="false" MaxLength="15" />
+    <Property Type="Int32" Name="cta_nrocta" Nullable="false" />
+    <Property Type="String" Name="cta_descrip" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="H_CondPagoProveed_Result">
+    <Property Type="String" Name="CondPago" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="cpg_Desc" Nullable="false" MaxLength="35" />
+  </ComplexType>
+  <EntityType Name="stkMoviReqInterno">
+    <Key>
+      <PropertyRef Name="codEmpStk" />
+      <PropertyRef Name="comprobanteStk" />
+      <PropertyRef Name="nroItemStk" />
+      <PropertyRef Name="codEmp" />
+      <PropertyRef Name="requerimiento_id" />
+      <PropertyRef Name="nroItem" />
+    </Key>
+    <Property Name="codEmpStk" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="comprobanteStk" Type="Int32" Nullable="false" />
+    <Property Name="nroItemStk" Type="Int32" Nullable="false" />
+    <Property Name="codEmp" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="requerimiento_id" Type="Int32" Nullable="false" />
+    <Property Name="nroItem" Type="Int32" Nullable="false" />
+    <Property Name="uniMed" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="cantEnviada" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="remSucursal" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="remComprobante" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="comRequerimientoInterno">
+    <Key>
+      <PropertyRef Name="codEmp" />
+      <PropertyRef Name="requerimiento_id" />
+    </Key>
+    <Property Name="codEmp" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="requerimiento_id" Type="Int32" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="sectorRequerimiento_id" Type="Int32" Nullable="false" />
+    <Property Name="estado_id" Type="Int32" Nullable="false" />
+    <Property Name="obs" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="usuario" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="usuarioAutoriza" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="fechaAutorizacion" Type="DateTime" Precision="3" />
+    <Property Name="motivoAnulacion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="pedidoDiario" Type="Boolean" />
+    <Property Name="sectorEntrega_id" Type="Int32" />
+    <Property Name="fechaFinalizacion" Type="DateTime" Precision="3" />
+    <Property Name="motivoFinalizacion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="usuarioFinaliza" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="depositoOrigen_id" Type="Int32" />
+    <Property Name="sectorDepositoOrigen_id" Type="Int32" />
+    <Property Name="depositoDestino_id" Type="Int32" />
+    <Property Name="sectorDepositoDestino_id" Type="Int32" />
+    <NavigationProperty Name="comRequerimientoInternoItem" Relationship="StaCatalinaModel.FK_comRequerimientoInternoItem_comRequerimiento" FromRole="comRequerimientoInterno" ToRole="comRequerimientoInternoItem" />
+  </EntityType>
+  <EntityType Name="comRequerimientoInternoItem">
+    <Key>
+      <PropertyRef Name="codEmp" />
+      <PropertyRef Name="requerimiento_id" />
+      <PropertyRef Name="nroItem" />
+    </Key>
+    <Property Name="codEmp" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="requerimiento_id" Type="Int32" Nullable="false" />
+    <Property Name="nroItem" Type="Int32" Nullable="false" />
+    <Property Name="articulo_id" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="uniMed" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="cantidad" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="nivelAut_id" Type="Int32" Nullable="false" />
+    <Property Name="fechaEntrega" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="marca" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="excluido" Type="Int32" />
+    <Property Name="motivoExclusion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="usuarioExcluye" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="comRequerimientoInterno" Relationship="StaCatalinaModel.FK_comRequerimientoInternoItem_comRequerimiento" FromRole="comRequerimientoInternoItem" ToRole="comRequerimientoInterno" />
+  </EntityType>
+  <Association Name="FK_comRequerimientoInternoItem_comRequerimiento">
+    <End Type="StaCatalinaModel.comRequerimientoInterno" Role="comRequerimientoInterno" Multiplicity="1" />
+    <End Type="StaCatalinaModel.comRequerimientoInternoItem" Role="comRequerimientoInternoItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="comRequerimientoInterno">
+        <PropertyRef Name="codEmp" />
+        <PropertyRef Name="requerimiento_id" />
+      </Principal>
+      <Dependent Role="comRequerimientoInternoItem">
+        <PropertyRef Name="codEmp" />
+        <PropertyRef Name="requerimiento_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="comUsuarioEnviaMail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id_Usuario" Type="Int32" Nullable="false" />
+    <Property Name="Id_Usuario_EnviaMail" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="TBL_Usuarios" Relationship="StaCatalinaModel.FK_comUsuarioEnviaMail_TBL_Usuarios" FromRole="comUsuarioEnviaMail" ToRole="TBL_Usuarios" />
+  </EntityType>
+  <EntityType Name="TBL_Usuarios">
+    <Key>
+      <PropertyRef Name="Id_Usuario" />
+    </Key>
+    <Property Name="Id_Usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id_Perfil" Type="Int32" Nullable="false" />
+    <Property Name="IdentificadorUsuario" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ContraseniaUsuario" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="NombreUsuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Inactivo" Type="Boolean" Nullable="false" />
+    <Property Name="Sector_id" Type="Int32" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Empresa" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="comUsuarioEnviaMail" Relationship="StaCatalinaModel.FK_comUsuarioEnviaMail_TBL_Usuarios" FromRole="TBL_Usuarios" ToRole="comUsuarioEnviaMail" />
+  </EntityType>
+  <Association Name="FK_comUsuarioEnviaMail_TBL_Usuarios">
+    <End Type="StaCatalinaModel.TBL_Usuarios" Role="TBL_Usuarios" Multiplicity="1" />
+    <End Type="StaCatalinaModel.comUsuarioEnviaMail" Role="comUsuarioEnviaMail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Usuarios">
+        <PropertyRef Name="Id_Usuario" />
+      </Principal>
+      <Dependent Role="comUsuarioEnviaMail">
+        <PropertyRef Name="Id_Usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="comOrdenCompra">
+    <Key>
+      <PropertyRef Name="codEmp" />
+      <PropertyRef Name="ordenCompra_id" />
+    </Key>
+    <Property Name="codEmp" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ordenCompra_id" Type="Int32" Nullable="false" />
+    <Property Name="codEmpRequerimiento" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="requerimiento_id" Type="Int32" />
+    <Property Name="fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="proveed_id" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="sectorRequerimiento_id" Type="Int32" />
+    <Property Name="estado_id" Type="Int32" Nullable="false" />
+    <Property Name="tipoOc_id" Type="Int32" Nullable="false" />
+    <Property Name="modificaCosto" Type="Int32" Nullable="false" />
+    <Property Name="condicionPago_id" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="obs" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="usuario" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="usuarioAutoriza" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PDC" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="fechaAutorizacion" Type="DateTime" Precision="3" />
+    <Property Name="motivoFinaliz_Anulacion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="fechaFinaliz_Anulacion" Type="DateTime" Precision="3" />
+    <Property Name="pedidoDiario" Type="Boolean" />
+    <Property Name="proveed_Original" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="sectorEntrega_id" Type="Int32" />
+    <Property Name="tipoProrrateo" Type="Int16" />
+    <NavigationProperty Name="comOrdenCompraDetalle" Relationship="StaCatalinaModel.FK_comOrdenCompraDetalle_comOrdenCompra" FromRole="comOrdenCompra" ToRole="comOrdenCompraDetalle" />
+  </EntityType>
+  <EntityType Name="comRequerimientoItem">
+    <Key>
+      <PropertyRef Name="codEmp" />
+      <PropertyRef Name="requerimiento_id" />
+      <PropertyRef Name="nroItem" />
+    </Key>
+    <Property Name="codEmp" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="requerimiento_id" Type="Int32" Nullable="false" />
+    <Property Name="nroItem" Type="Int32" Nullable="false" />
+    <Property Name="articulo_id" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="uniMed" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="cantidad" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="nivelAut_id" Type="Int32" Nullable="false" />
+    <Property Name="fechaEntrega" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="marca" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="excluido" Type="Int32" />
+    <Property Name="motivoExclusion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="usuarioExcluye" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="TraeProveedorEmpresa_Result">
+    <Property Type="String" Name="codEmp" Nullable="true" MaxLength="4" />
+    <Property Type="String" Name="RazonSocial" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="500" />
+  </ComplexType>
+  <EntityType Name="comOrdenCompraDetalle">
+    <Key>
+      <PropertyRef Name="codEmp" />
+      <PropertyRef Name="ordenCompra_id" />
+      <PropertyRef Name="nroItem" />
+    </Key>
+    <Property Name="codEmp" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="ordenCompra_id" Type="Int32" Nullable="false" />
+    <Property Name="nroItem" Type="Int32" Nullable="false" />
+    <Property Name="nivelAuto_id" Type="Int32" Nullable="false" />
+    <Property Name="importe" Type="Double" Nullable="false" />
+    <Property Name="detalle" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="cantidad" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="comOrdenCompra" Relationship="StaCatalinaModel.FK_comOrdenCompraDetalle_comOrdenCompra" FromRole="comOrdenCompraDetalle" ToRole="comOrdenCompra" />
+  </EntityType>
+  <Association Name="FK_comOrdenCompraDetalle_comOrdenCompra">
+    <End Type="StaCatalinaModel.comOrdenCompra" Role="comOrdenCompra" Multiplicity="1" />
+    <End Type="StaCatalinaModel.comOrdenCompraDetalle" Role="comOrdenCompraDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="comOrdenCompra">
+        <PropertyRef Name="codEmp" />
+        <PropertyRef Name="ordenCompra_id" />
+      </Principal>
+      <Dependent Role="comOrdenCompraDetalle">
+        <PropertyRef Name="codEmp" />
+        <PropertyRef Name="ordenCompra_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="ordenCompraSinStock_ParaModificar_Result">
+    <Property Type="String" Name="codEmp" Nullable="false" MaxLength="4" />
+    <Property Type="Int32" Name="ordenCompra_id" Nullable="false" />
+    <Property Type="String" Name="proveed_id" Nullable="false" MaxLength="6" />
+    <Property Type="String" Name="RazonSocial" Nullable="true" MaxLength="40" />
+    <Property Type="String" Name="Obs" Nullable="false" MaxLength="Max" />
+    <Property Type="Int32" Name="sectorEntrega_id" Nullable="true" />
+    <Property Type="Int32" Name="nroitem" Nullable="false" />
+    <Property Type="Decimal" Name="cantidad" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Double" Name="importe" Nullable="false" />
+    <Property Type="String" Name="detalle" Nullable="false" MaxLength="Max" />
+    <Property Type="DateTime" Name="fechaAutorizacion" Nullable="true" Precision="23" />
+    <Property Type="String" Name="usuarioAutoriza" Nullable="false" MaxLength="20" />
+    <Property Type="Int16" Name="tipoProrrateo" Nullable="true" />
+  </ComplexType>
+</Schema>

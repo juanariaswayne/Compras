@@ -1,0 +1,4202 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Entities
+</name>
+</assembly>
+<members>
+<member name="T:Entities.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Entities.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Entities.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:Entities.Tables.TBL_MENUS.ID_MENU">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_MENUS.ID_MENUPADRE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_MENUS.DESCRIPCIONMENU">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_MENUS.POSICIONMENU">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_MENUS.HABILITADOMENU">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Boolean</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_MENUS.URLMENU">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_MENUS.FORMULARIOASOCIADO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Boolean</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_PERFILES.ID_PERFIL">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_PERFILES.NOMBREPERFIL">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_PERFILES.DESCRIPCIONPERFIL">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_PERFILESPERMISOS.ID_PERFILPERMISOS">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_PERFILESPERMISOS.ID_PERFIL">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_PERFILESPERMISOS.ID_MENU">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_PERFILESPERMISOS.LECTURA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Boolean</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_PERFILESPERMISOS.ESCRITURA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Boolean</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_PERFILESPERMISOS.ELIMINACION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Boolean</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_USUARIOS.ID_USUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_USUARIOS.ID_PERFIL">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_USUARIOS.IDENTIFICADORUSUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_USUARIOS.CONTRASENIAUSUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_USUARIOS.NOMBREUSUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_USUARIOS.INACTIVO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Boolean</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_USUARIOS.SECTOR_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_USUARIOS.EMAIL">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TBL_USUARIOS.EMPRESA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.PROVSEGUIMIENTO.CCOEMP_CODIGO">
+ <summary>
+ Código de empresa
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.PROVSEGUIMIENTO.CCOSUC_COD">
+ <summary>
+ Código de sucursal.
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.PROVSEGUIMIENTO.CCO_ID">
+ <summary>
+ Identificador del comprobante
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.PROVSEGUIMIENTO.CCOTCO_COD">
+ <summary>
+ Tipo de comprobante
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.PROVSEGUIMIENTO.CCO_LETRA">
+ <summary>
+ letra comprobante
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.PROVSEGUIMIENTO.CCO_CODPVT">
+ <summary>
+ Punto de venta
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.PROVSEGUIMIENTO.CCO_NRO">
+ <summary>
+ Nro de comprobante
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.PROVSEGUIMIENTO.CCO_FEMISION">
+ <summary>
+ fecha de Emision
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.PROVSEGUIMIENTO.CCO_FVTO">
+ <summary>
+ fecha de vto
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.PROVSEGUIMIENTO.CCO_IMPMONLOC">
+ <summary>
+ Importe
+ </summary>
+ <value></value>
+ <returns>Double</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.PROVSEGUIMIENTO.CCO_SALDOMONLOC">
+ <summary>
+ Saldo
+ </summary>
+ <value></value>
+ <returns>Double</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.PROVSEGUIMIENTO.CCO_CODPRO">
+ <summary>
+ Codigo Proveedor
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.PROVSEGUIMIENTO.CCOPRO_RAZSOC">
+ <summary>
+ Nombre Proveedor
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.PROVSEGUIMIENTO.TIPORECLAMO">
+ <summary>
+ N: Normal / C: Crítico / U: Urgente
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.PROVSEGUIMIENTO.ESTADO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.PROVSEGUIMIENTO.USUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.PROVSEGUIMIENTO.ADEUDANC">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Boolean</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.PROVSEGUIMIENTO.FECHAULTIMORECLAMO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.ENTREGAORDENPAGO.CCOEMP_CODIGO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.ENTREGAORDENPAGO.CCOSUC_COD">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.ENTREGAORDENPAGO.CCO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.ENTREGAORDENPAGO.CCO_NRO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.ENTREGAORDENPAGO.CCO_FEMISION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.ENTREGAORDENPAGO.CCO_IMPMONLOC">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Double</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.ENTREGAORDENPAGO.CCO_CODPRO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.ENTREGAORDENPAGO.CCOPRO_RAZSOC">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.ENTREGAORDENPAGO.FECHARETIRO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.ENTREGAORDENPAGO.USUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.HISTORIALSEGUIMIENTO.ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.HISTORIALSEGUIMIENTO.CCOEMP_CODIGO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.HISTORIALSEGUIMIENTO.CCOSUC_COD">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.HISTORIALSEGUIMIENTO.CCO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.HISTORIALSEGUIMIENTO.FECHA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.HISTORIALSEGUIMIENTO.OBS">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.RECLAMOFACTURASINCARGAR.ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.RECLAMOFACTURASINCARGAR.CCO_CODPRO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.RECLAMOFACTURASINCARGAR.CCOPRO_RAZSOC">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.RECLAMOFACTURASINCARGAR.CCO_NRO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.RECLAMOFACTURASINCARGAR.CCO_FEMISION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.RECLAMOFACTURASINCARGAR.CCO_IMPMONLOC">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Double</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.RECLAMOFACTURASINCARGAR.FECHARECLAMO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.RECLAMOFACTURASINCARGAR.USUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.RECLAMOFACTURASINCARGAR.ENBEJERMAN">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.RECLAMOFACTURASINCARGAR.OBS">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKENVIOSARTICULOS.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKENVIOSARTICULOS.FECHA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKENVIOSARTICULOS.ID_ARTICULO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKENVIOSARTICULOS.UNIMED">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKENVIOSARTICULOS.CANTIDAD">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKENVIOSARTICULOS.USUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKENVIOSARTICULOS.OBS">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMAUTORIZACION.NIVEL_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMAUTORIZACION.DESCRIPCION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMESTADO.ESTADO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMESTADO.DESCRIPCION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRA.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRA.ORDENCOMPRA_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRA.CODEMPREQUERIMIENTO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRA.REQUERIMIENTO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRA.FECHA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRA.PROVEED_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRA.SECTORREQUERIMIENTO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRA.ESTADO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRA.TIPOOC_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRA.MODIFICACOSTO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRA.CONDICIONPAGO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRA.OBS">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRA.USUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRA.USUARIOAUTORIZA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRA.PDC">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRA.FECHAAUTORIZACION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRA.MOTIVOFINALIZ_ANULACION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRA.FECHAFINALIZ_ANULACION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRA.PEDIDODIARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Boolean</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRA.PROVEED_ORIGINAL">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRA.SECTORENTREGA_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRAITEM.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRAITEM.ORDENCOMPRA_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRAITEM.NROITEM">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRAITEM.ARTICULO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRAITEM.UNIMED">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRAITEM.CANTIDAD">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRAITEM.PRECIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRAITEM.NIVELAUT_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRAITEM.FECHAENTREGA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRAITEM.FECHAENTREGA1">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRAITEM.CANTIDAD1">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRAITEM.EMBALAJE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRAITEM.MARCA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRAITEM.CODEMPREQUERIMIENTO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRAITEM.REQUERIMIENTO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRAITEM.CANTIDADORIGINAL">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRAITEM.PRECIOORIGINAL">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRAITEM.EXCLUIDO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Boolean</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRAITEM.MOTIVOEXCLUSION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRAITEM.USUARIOEXCLUYE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTO.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTO.REQUERIMIENTO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTO.FECHA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTO.SECTORREQUERIMIENTO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTO.PROVEED_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTO.ESTADO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTO.OBS">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTO.USUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTO.USUARIOAUTORIZA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTO.FECHAAUTORIZACION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTO.MOTIVOANULACION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTO.PEDIDODIARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Boolean</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTO.SECTORENTREGA_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOITEM.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOITEM.REQUERIMIENTO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOITEM.NROITEM">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOITEM.ARTICULO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOITEM.UNIMED">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOITEM.CANTIDAD">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOITEM.NIVELAUT_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOITEM.FECHAENTREGA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOITEM.MARCA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOITEM.EXCLUIDO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOITEM.MOTIVOEXCLUSION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOITEM.USUARIOEXCLUYE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOORDENCOMPRA.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOORDENCOMPRA.REQUERIMIENTO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOORDENCOMPRA.NROITEM">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOORDENCOMPRA.CODEMPOC">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOORDENCOMPRA.ORDENCOMPRA_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOORDENCOMPRA.NROITEMOC">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMSECTORREQUERIMIENTO.SECTORREQUERIMIENTO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMSECTORREQUERIMIENTO.DESCRIPCION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMTIPOOC.TIPOOC_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMTIPOOC.DESCRIPCION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKARTICULOS.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKARTICULOS.ARTICULO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKARTICULOS.DESCRIPCION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKARTICULOS.TOLERANCIAINGSTOCK">
+ <summary>
+ Es porcentaje
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKARTICULOS.STOCKMINIMO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKARTICULOS.STOCKMAXIMO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKARTICULOS.VAASTOCK">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKARTICULOS.UNIMEDPPAL">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKARTICULOS.UNIMEDSEC">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKARTICULOS.FACTORCONVERSION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKARTICULOS.CODIGOIM">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKARTICULOS.MOSTRARENREQUERIMIENTO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Boolean</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKARTICULOS.TRAZABLE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Boolean</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKARTICULOS.CODIGOSUBCUENTA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKARTICULOS.LLEVARECETA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Boolean</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKARTICULOS.LLEVAVENCIMIENTO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Boolean</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKDEPOSITO.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKDEPOSITO.DEPOSITO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKDEPOSITO.DESCRIPCION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKDEPOSITO.STOCKNEGATIVO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKENTRANSITO.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKENTRANSITO.COMPROBANTE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKENTRANSITO.NROITEM">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKENTRANSITO.CANTORIGINAL">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKENTRANSITO.CANTRECIBIDA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKENTRANSITO.UNIMED">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKENTRANSITO.ESTADO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKENTRANSITO.USUARIOGENERA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKENTRANSITO.USUARIORECIBE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKENTRANSITO.FECHARECEPCION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKINVENTARIO.DEPOSITO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKINVENTARIO.SECTOR_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKINVENTARIO.UNIMED">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKINVENTARIO.CANTIDAD">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKREMITO.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKREMITO.SUCURSAL">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKREMITO.COMPROBANTE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKREMITO.LETRA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKREMITO.FECHA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKREMITO.CODEMPSTK">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKREMITO.COMPROBANTESTK">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIMIENTO.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIMIENTO.COMPROBANTE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIMIENTO.TIPOMOV_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIMIENTO.SUBTIPOMOV_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIMIENTO.FECHAMOV">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIMIENTO.DEPOSITOORIGEN_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIMIENTO.SECTORORIGEN_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIMIENTO.DEPOSITODESTINO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIMIENTO.SECTORDESTINO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIMIENTO.USUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIMIENTO.ANULADO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIMIENTO.OBS">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIMIENTOITEM.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIMIENTOITEM.COMPROBANTE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIMIENTOITEM.NROITEM">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIMIENTOITEM.ARTICULO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIMIENTOITEM.UNIMED">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIMIENTOITEM.CANTIDAD">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIMIENTOITEM.COSTOUNI">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKSECTOR.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKSECTOR.DEPOSITO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKSECTOR.SECTOR_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKSECTOR.DESCRIPCION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKSUBTIPOMOV.SUBTIPOMOV_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKSUBTIPOMOV.DESCRIPCION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKTIPOMOV.TIPOMOV_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKTIPOMOV.DESCRIPCION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKTIPOMOV.SIGNO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIOC.CODEMPSTK">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIOC.COMPROBANTESTK">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIOC.NROITEMSTK">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIOC.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIOC.ORDENCOMPRA_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIOC.NROITEM">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIOC.UNIMED">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIOC.CANTORIGINAL">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKMOVIOC.CANTINGRESADA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKCIERRESTOCK.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKCIERRESTOCK.ANIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKCIERRESTOCK.MES">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKCIERRESTOCK.ARTICULO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKCIERRESTOCK.UNIMED">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKCIERRESTOCK.STOCKREAL">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKCIERRESTOCK.CANTREPONER">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKCIERRESTOCK.FECHAMOV">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TESFACTURAPROVEED.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TESFACTURAPROVEED.SUCFACTURA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TESFACTURAPROVEED.COMPROBANTE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TESFACTURAPROVEED.TIPO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TESFACTURAPROVEED.PRO_COD">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TESFACTURAPROVEED.FECHAFACT">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TESFACTURAPROVEED.IMPORTE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TESFACTURAPROVEED.CODIGOBARRA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TESFACTURAPROVEED.FECHALECTURA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TESFACTURAPROVEED.USUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOBIONEXO.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOBIONEXO.REQUERIMIENTO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOBIONEXO.NROITEM">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOBIONEXO.NROSOLICITUD">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOBIONEXO.CANTIDAD">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOBIONEXO.FECHA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TESFACTURASRECIBIDAS.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TESFACTURASRECIBIDAS.LETRA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TESFACTURASRECIBIDAS.PUNTODEVENTA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TESFACTURASRECIBIDAS.NUMEROCOMPROBANTE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TESFACTURASRECIBIDAS.CODIGOPROVEED">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TESFACTURASRECIBIDAS.FECHARECEPCION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TESFACTURASRECIBIDAS.FECHACONTABLE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TESFACTURASRECIBIDAS.RAZONSOCIAL">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TESFACTURASRECIBIDAS.IMPORTE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Double</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.TESFACTURASRECIBIDAS.USUARIORECIBE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.USUARIOXSUBRUBRO.ID_USUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.USUARIOXSUBRUBRO.ARTDA2_COD">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKARTICULOMARCA.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKARTICULOMARCA.ARTICULO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKARTICULOMARCA.MARCA1">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKARTICULOMARCA.MARCA2">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKARTICULOMARCA.MARCA3">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKARTICULOMARCA.MARCA4">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKARTICULOMARCA.MARCA5">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMPEDIDOCOTIZACIONPROVEEDDIRECTO.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMPEDIDOCOTIZACIONPROVEEDDIRECTO.NROCOTIZACION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMPEDIDOCOTIZACIONPROVEEDDIRECTO.REQUERIMIENTO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMPEDIDOCOTIZACIONPROVEEDDIRECTO.NROITEM">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMPEDIDOCOTIZACIONPROVEEDDIRECTO.ARTICULO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMPEDIDOCOTIZACIONPROVEEDDIRECTO.PROVEED_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMPEDIDOCOTIZACIONPROVEEDDIRECTO.UNIMED">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMPEDIDOCOTIZACIONPROVEEDDIRECTO.CANTIDAD">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMPEDIDOCOTIZACIONPROVEEDDIRECTO.FECHA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMPEDIDOCOTIZACIONPROVEEDDIRECTO.USUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMPEDIDOCOTIZACIONPROVEEDDIRECTO.OBS">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STK_RECLAMODEMERCADERIA.ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STK_RECLAMODEMERCADERIA.PLANTILLAID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STK_RECLAMODEMERCADERIA.SECTOR_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STK_RECLAMODEMERCADERIA.DEPOSITO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STK_RECLAMODEMERCADERIA.NUMFACTURA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STK_RECLAMODEMERCADERIA.NUMREMITO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STK_RECLAMODEMERCADERIA.ARTICULO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STK_RECLAMODEMERCADERIA.CANTIDADFALTANTE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STK_RECLAMODEMERCADERIA.CANTIDADRECIBIDADEMAS">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STK_RECLAMODEMERCADERIA.CANTIDADRECIBIDAPORERROR">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STK_RECLAMODEMERCADERIA.ANOTACION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STK_RECLAMODEMERCADERIA.USUARIO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STK_RECLAMODEMERCADERIA.FECHA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMARTICULOSPROVISORIOS.ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMARTICULOSPROVISORIOS.CODPROVISORIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMARTICULOSPROVISORIOS.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMARTICULOSPROVISORIOS.REQUERIMIENTO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMARTICULOSPROVISORIOS.NROITEM">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMARTICULOSPROVISORIOS.PENDIENTEENBEJERMAN">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMARTICULOSPROVISORIOS.DESCRIPCION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMARTICULOSPROVISORIOS.PRESENTACION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMARTICULOSPROVISORIOS.UNIMED">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMARTICULOSPROVISORIOS.MARCA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMARTICULOSPROVISORIOS.EMBALAJE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMARTICULOSPROVISORIOS.CANTIDAD">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMARTICULOSPROVISORIOS.USUARIO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMARTICULOSPROVISORIOS.USUARIO_MAIL">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMARTICULOSPROVISORIOS.SUB_RUBRO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMEQUIVALENCIAARTICULOSPROVEED.ARTICULO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMEQUIVALENCIAARTICULOSPROVEED.PROVEED_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMEQUIVALENCIAARTICULOSPROVEED.ARTICULO_PROVEED">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMEQUIVALENCIAARTICULOSPROVEED.DESCRIP_ARTICULO_PROVEED">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMUSUARIOAUTORIZAREQUERIMIENTOS.ID_USUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMUSUARIOAUTORIZAREQUERIMIENTOS.SECTORREQUERIMIENTO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMCUENTAUSUARIO.ID_USUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMCUENTAUSUARIO.AGR_CODIGO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMCUENTAUSUARIO.COM_VALOR">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMCUENTAUSUARIO.CTA_NROCTA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMLUGARENTREGA.LUGAR_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMLUGARENTREGA.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMLUGARENTREGA.DESCRIPCION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMLUGARENTREGA.INACTIVO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Boolean</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMLUGARENTREGA.OBS">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STK_CONTROLLIBRERIA.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STK_CONTROLLIBRERIA.PERIDODO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STK_CONTROLLIBRERIA.ANIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STK_CONTROLLIBRERIA.ARTICULO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STK_CONTROLLIBRERIA.CANT_RECIBIDA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STK_CONTROLLIBRERIA.CANT_SOLICITADA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STK_CONTROLLIBRERIA.USUARIO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STK_CONTROLLIBRERIA.FECHA_CIERRE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.EVENTOUSUARIO.ID_USUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.EVENTOUSUARIO.EVENTO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.EVENTOUSUARIO.FECHA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.USR_ARTICULOSUBCUENTA.SUBCUENTA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.USR_ARTICULOSUBCUENTA.DESCRIPCION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNO.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNO.REQUERIMIENTO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNO.FECHA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNO.SECTORREQUERIMIENTO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNO.ESTADO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNO.OBS">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNO.USUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNO.USUARIOAUTORIZA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNO.FECHAAUTORIZACION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNO.MOTIVOANULACION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNO.PEDIDODIARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Boolean</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNO.SECTORENTREGA_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNO.FECHAFINALIZACION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Unknown</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNO.MOTIVOFINALIZACION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNO.USUARIOFINALIZA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNOITEM.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNOITEM.REQUERIMIENTO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNOITEM.NROITEM">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNOITEM.ARTICULO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNOITEM.UNIMED">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNOITEM.CANTIDAD">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNOITEM.NIVELAUT_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNOITEM.FECHAENTREGA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNOITEM.MARCA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNOITEM.EXCLUIDO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNOITEM.MOTIVOEXCLUSION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMREQUERIMIENTOINTERNOITEM.USUARIOEXCLUYE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKVENCIMIENTO.ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKVENCIMIENTO.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKVENCIMIENTO.COMPROBANTE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKVENCIMIENTO.ARTICULO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKVENCIMIENTO.CANTIDAD">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKVENCIMIENTO.ENSTOCK">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.STKVENCIMIENTO.VTO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRADETALLE.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRADETALLE.ORDENCOMPRA_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRADETALLE.NIVELAUTO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRADETALLE.IMPORTE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Double</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Tables.COMORDENCOMPRADETALLE.DETALLE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.TBL_PERFILESPERMISOS.ID_PERFILPERMISOS">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.TBL_PERFILESPERMISOS.ID_PERFIL">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>TBL_PERFILES</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.TBL_PERFILESPERMISOS.ID_MENU">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>TBL_MENUS</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.TBL_PERFILESPERMISOS.LECTURA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Boolean</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.TBL_PERFILESPERMISOS.ESCRITURA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Boolean</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.TBL_PERFILESPERMISOS.ELIMINACION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Boolean</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.TBL_USUARIOS.ID_USUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.TBL_USUARIOS.ID_PERFIL">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>TBL_PERFILES</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.TBL_USUARIOS.IDENTIFICADORUSUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.TBL_USUARIOS.CONTRASENIAUSUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.TBL_USUARIOS.NOMBREUSUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.TBL_USUARIOS.INACTIVO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Boolean</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.TBL_USUARIOS.SECTOR_ID">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>COMSECTORREQUERIMIENTO</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.TBL_USUARIOS.EMAIL">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.TBL_USUARIOS.EMPRESA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRA.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRA.ORDENCOMPRA_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRA.CODEMPREQUERIMIENTO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRA.REQUERIMIENTO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRA.FECHA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRA.PROVEED_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRA.SECTORREQUERIMIENTO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRA.ESTADO_ID">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>COMESTADO</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRA.TIPOOC_ID">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>COMTIPOOC</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRA.MODIFICACOSTO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRA.CONDICIONPAGO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRA.OBS">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRA.USUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRA.USUARIOAUTORIZA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRA.PDC">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRA.FECHAAUTORIZACION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRA.MOTIVOFINALIZ_ANULACION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRA.FECHAFINALIZ_ANULACION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRA.PEDIDODIARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Boolean</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRA.PROVEED_ORIGINAL">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRA.SECTORENTREGA_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRAITEM.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRAITEM.ORDENCOMPRA_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRAITEM.NROITEM">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRAITEM.ARTICULO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRAITEM.UNIMED">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRAITEM.CANTIDAD">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRAITEM.PRECIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRAITEM.NIVELAUT_ID">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>COMAUTORIZACION</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRAITEM.FECHAENTREGA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRAITEM.FECHAENTREGA1">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRAITEM.CANTIDAD1">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRAITEM.EMBALAJE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRAITEM.MARCA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRAITEM.CODEMPREQUERIMIENTO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRAITEM.REQUERIMIENTO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRAITEM.CANTIDADORIGINAL">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMORDENCOMPRAITEM.PRECIOORIGINAL">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTO.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTO.REQUERIMIENTO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTO.FECHA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTO.SECTORREQUERIMIENTO_ID">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>COMSECTORREQUERIMIENTO</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTO.PROVEED_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTO.ESTADO_ID">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>COMESTADO</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTO.OBS">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTO.USUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTO.USUARIOAUTORIZA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTO.FECHAAUTORIZACION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTO.MOTIVOANULACION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTO.PEDIDODIARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Boolean</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTOITEM.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTOITEM.REQUERIMIENTO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTOITEM.NROITEM">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTOITEM.ARTICULO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTOITEM.UNIMED">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTOITEM.CANTIDAD">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTOITEM.NIVELAUT_ID">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>COMAUTORIZACION</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTOITEM.FECHAENTREGA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTOITEM.MARCA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTOORDENCOMPRA.CODEMP">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>COMREQUERIMIENTOITEM</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTOORDENCOMPRA.REQUERIMIENTO_ID">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>COMREQUERIMIENTOITEM</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTOORDENCOMPRA.NROITEM">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>COMREQUERIMIENTOITEM</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTOORDENCOMPRA.CODEMPOC">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>COMORDENCOMPRAITEM</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTOORDENCOMPRA.ORDENCOMPRA_ID">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>COMORDENCOMPRAITEM</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTOORDENCOMPRA.NROITEMOC">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>COMORDENCOMPRAITEM</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKENTRANSITO.CODEMP">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>STKMOVIMIENTO</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKENTRANSITO.COMPROBANTE">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>STKMOVIMIENTO</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKENTRANSITO.NROITEM">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKENTRANSITO.CANTORIGINAL">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKENTRANSITO.CANTRECIBIDA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKENTRANSITO.UNIMED">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKENTRANSITO.ESTADO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKENTRANSITO.USUARIOGENERA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKENTRANSITO.USUARIORECIBE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKENTRANSITO.FECHARECEPCION">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKINVENTARIO.DEPOSITO_ID">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>STKSECTOR</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKINVENTARIO.SECTOR_ID">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>STKSECTOR</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKINVENTARIO.UNIMED">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKINVENTARIO.CANTIDAD">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIMIENTO.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIMIENTO.COMPROBANTE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIMIENTO.TIPOMOV_ID">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>STKTIPOMOV</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIMIENTO.SUBTIPOMOV_ID">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>STKSUBTIPOMOV</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIMIENTO.FECHAMOV">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIMIENTO.DEPOSITOORIGEN_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIMIENTO.SECTORORIGEN_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIMIENTO.DEPOSITODESTINO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIMIENTO.SECTORDESTINO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIMIENTO.USUARIO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIMIENTO.ANULADO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIMIENTO.OBS">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIMIENTOITEM.CODEMP">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>STKMOVIMIENTO</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIMIENTOITEM.COMPROBANTE">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>STKMOVIMIENTO</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIMIENTOITEM.NROITEM">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIMIENTOITEM.ARTICULO_ID">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIMIENTOITEM.UNIMED">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIMIENTOITEM.CANTIDAD">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIMIENTOITEM.COSTOUNI">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIOC.CODEMPSTK">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>STKMOVIMIENTOITEM</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIOC.COMPROBANTESTK">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>STKMOVIMIENTOITEM</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIOC.NROITEMSTK">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>STKMOVIMIENTOITEM</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIOC.CODEMP">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>COMORDENCOMPRAITEM</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIOC.ORDENCOMPRA_ID">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>COMORDENCOMPRAITEM</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIOC.NROITEM">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>COMORDENCOMPRAITEM</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIOC.UNIMED">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIOC.CANTORIGINAL">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKMOVIOC.CANTINGRESADA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKREMITO.CODEMP">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKREMITO.SUCURSAL">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKREMITO.COMPROBANTE">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKREMITO.LETRA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKREMITO.FECHA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKREMITO.CODEMPSTK">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>STKMOVIMIENTO</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.STKREMITO.COMPROBANTESTK">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>STKMOVIMIENTO</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTOBIONEXO.CODEMP">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>COMREQUERIMIENTOITEM</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTOBIONEXO.REQUERIMIENTO_ID">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>COMREQUERIMIENTOITEM</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTOBIONEXO.NROITEM">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>COMREQUERIMIENTOITEM</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTOBIONEXO.NROSOLICITUD">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTOBIONEXO.CANTIDAD">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Decimal</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMREQUERIMIENTOBIONEXO.FECHA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>DateTime</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMCUENTAUSUARIO.ID_USUARIO">
+ <summary>
+  (Instance) 
+ </summary>
+ <value></value>
+ <returns>TBL_USUARIOS</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMCUENTAUSUARIO.AGR_CODIGO">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMCUENTAUSUARIO.COM_VALOR">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>String</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Entities.Joins.COMCUENTAUSUARIO.CTA_NROCTA">
+ <summary>
+ 
+ </summary>
+ <value></value>
+ <returns>Int32</returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StaCatalinaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="comOrdenCompra">
+    <Key>
+      <PropertyRef Name="codEmp" />
+      <PropertyRef Name="ordenCompra_id" />
+    </Key>
+    <Property Name="codEmp" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="ordenCompra_id" Type="int" Nullable="false" />
+    <Property Name="codEmpRequerimiento" Type="varchar" MaxLength="4" />
+    <Property Name="requerimiento_id" Type="int" />
+    <Property Name="fecha" Type="datetime" Nullable="false" />
+    <Property Name="proveed_id" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="sectorRequerimiento_id" Type="int" />
+    <Property Name="estado_id" Type="int" Nullable="false" />
+    <Property Name="tipoOc_id" Type="int" Nullable="false" />
+    <Property Name="modificaCosto" Type="int" Nullable="false" />
+    <Property Name="condicionPago_id" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="obs" Type="text" Nullable="false" />
+    <Property Name="usuario" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="usuarioAutoriza" Type="varchar" MaxLength="20" />
+    <Property Name="PDC" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="fechaAutorizacion" Type="datetime" />
+    <Property Name="motivoFinaliz_Anulacion" Type="text" />
+    <Property Name="fechaFinaliz_Anulacion" Type="datetime" />
+    <Property Name="pedidoDiario" Type="bit" />
+    <Property Name="proveed_Original" Type="varchar" MaxLength="6" />
+    <Property Name="sectorEntrega_id" Type="int" />
+    <Property Name="tipoProrrateo" Type="smallint" />
+  </EntityType>
+  <EntityType Name="comOrdenCompraDetalle">
+    <Key>
+      <PropertyRef Name="codEmp" />
+      <PropertyRef Name="ordenCompra_id" />
+      <PropertyRef Name="nroItem" />
+    </Key>
+    <Property Name="codEmp" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="ordenCompra_id" Type="int" Nullable="false" />
+    <Property Name="nroItem" Type="int" Nullable="false" />
+    <Property Name="nivelAuto_id" Type="int" Nullable="false" />
+    <Property Name="importe" Type="float" Nullable="false" />
+    <Property Name="detalle" Type="text" Nullable="false" />
+    <Property Name="cantidad" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="comRequerimientoInterno">
+    <Key>
+      <PropertyRef Name="codEmp" />
+      <PropertyRef Name="requerimiento_id" />
+    </Key>
+    <Property Name="codEmp" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="requerimiento_id" Type="int" Nullable="false" />
+    <Property Name="fecha" Type="datetime" Nullable="false" />
+    <Property Name="sectorRequerimiento_id" Type="int" Nullable="false" />
+    <Property Name="estado_id" Type="int" Nullable="false" />
+    <Property Name="obs" Type="text" Nullable="false" />
+    <Property Name="usuario" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="usuarioAutoriza" Type="varchar" MaxLength="20" />
+    <Property Name="fechaAutorizacion" Type="datetime" />
+    <Property Name="motivoAnulacion" Type="text" />
+    <Property Name="pedidoDiario" Type="bit" />
+    <Property Name="sectorEntrega_id" Type="int" />
+    <Property Name="fechaFinalizacion" Type="datetime" />
+    <Property Name="motivoFinalizacion" Type="text" />
+    <Property Name="usuarioFinaliza" Type="varchar" MaxLength="20" />
+    <Property Name="depositoOrigen_id" Type="int" />
+    <Property Name="sectorDepositoOrigen_id" Type="int" />
+    <Property Name="depositoDestino_id" Type="int" />
+    <Property Name="sectorDepositoDestino_id" Type="int" />
+  </EntityType>
+  <EntityType Name="comRequerimientoInternoItem">
+    <Key>
+      <PropertyRef Name="codEmp" />
+      <PropertyRef Name="requerimiento_id" />
+      <PropertyRef Name="nroItem" />
+    </Key>
+    <Property Name="codEmp" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="requerimiento_id" Type="int" Nullable="false" />
+    <Property Name="nroItem" Type="int" Nullable="false" />
+    <Property Name="articulo_id" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="uniMed" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="cantidad" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="nivelAut_id" Type="int" Nullable="false" />
+    <Property Name="fechaEntrega" Type="datetime" Nullable="false" />
+    <Property Name="marca" Type="varchar" MaxLength="60" />
+    <Property Name="excluido" Type="int" />
+    <Property Name="motivoExclusion" Type="varchar" MaxLength="250" />
+    <Property Name="usuarioExcluye" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="comRequerimientoItem">
+    <Key>
+      <PropertyRef Name="codEmp" />
+      <PropertyRef Name="requerimiento_id" />
+      <PropertyRef Name="nroItem" />
+    </Key>
+    <Property Name="codEmp" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="requerimiento_id" Type="int" Nullable="false" />
+    <Property Name="nroItem" Type="int" Nullable="false" />
+    <Property Name="articulo_id" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="uniMed" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="cantidad" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="nivelAut_id" Type="int" Nullable="false" />
+    <Property Name="fechaEntrega" Type="datetime" Nullable="false" />
+    <Property Name="marca" Type="varchar" MaxLength="60" />
+    <Property Name="excluido" Type="int" />
+    <Property Name="motivoExclusion" Type="varchar" MaxLength="250" />
+    <Property Name="usuarioExcluye" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="comUsuarioEnviaMail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_Usuario" Type="int" Nullable="false" />
+    <Property Name="Id_Usuario_EnviaMail" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="stkMoviReqInterno">
+    <Key>
+      <PropertyRef Name="codEmpStk" />
+      <PropertyRef Name="comprobanteStk" />
+      <PropertyRef Name="nroItemStk" />
+      <PropertyRef Name="codEmp" />
+      <PropertyRef Name="requerimiento_id" />
+      <PropertyRef Name="nroItem" />
+    </Key>
+    <Property Name="codEmpStk" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="comprobanteStk" Type="int" Nullable="false" />
+    <Property Name="nroItemStk" Type="int" Nullable="false" />
+    <Property Name="codEmp" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="requerimiento_id" Type="int" Nullable="false" />
+    <Property Name="nroItem" Type="int" Nullable="false" />
+    <Property Name="uniMed" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="cantEnviada" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="remSucursal" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="remComprobante" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TBL_Usuarios">
+    <Key>
+      <PropertyRef Name="Id_Usuario" />
+    </Key>
+    <Property Name="Id_Usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_Perfil" Type="int" Nullable="false" />
+    <Property Name="IdentificadorUsuario" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ContraseniaUsuario" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="NombreUsuario" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Inactivo" Type="bit" Nullable="false" />
+    <Property Name="Sector_id" Type="int" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Empresa" Type="varchar" MaxLength="4" />
+  </EntityType>
+  <EntityType Name="varEmpresa">
+    <Key>
+      <PropertyRef Name="codEmp" />
+    </Key>
+    <Property Name="codEmp" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="60" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_comOrdenCompraDetalle_comOrdenCompra">
+    <End Role="comOrdenCompra" Type="Self.comOrdenCompra" Multiplicity="1" />
+    <End Role="comOrdenCompraDetalle" Type="Self.comOrdenCompraDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="comOrdenCompra">
+        <PropertyRef Name="codEmp" />
+        <PropertyRef Name="ordenCompra_id" />
+      </Principal>
+      <Dependent Role="comOrdenCompraDetalle">
+        <PropertyRef Name="codEmp" />
+        <PropertyRef Name="ordenCompra_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_comRequerimientoInternoItem_comRequerimiento">
+    <End Role="comRequerimientoInterno" Type="Self.comRequerimientoInterno" Multiplicity="1" />
+    <End Role="comRequerimientoInternoItem" Type="Self.comRequerimientoInternoItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="comRequerimientoInterno">
+        <PropertyRef Name="codEmp" />
+        <PropertyRef Name="requerimiento_id" />
+      </Principal>
+      <Dependent Role="comRequerimientoInternoItem">
+        <PropertyRef Name="codEmp" />
+        <PropertyRef Name="requerimiento_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_comUsuarioEnviaMail_TBL_Usuarios">
+    <End Role="TBL_Usuarios" Type="Self.TBL_Usuarios" Multiplicity="1" />
+    <End Role="comUsuarioEnviaMail" Type="Self.comUsuarioEnviaMail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBL_Usuarios">
+        <PropertyRef Name="Id_Usuario" />
+      </Principal>
+      <Dependent Role="comUsuarioEnviaMail">
+        <PropertyRef Name="Id_Usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="ACTUALIZA_OBS_REQ_INTERNO" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codEmp" Type="varchar" Mode="In" />
+    <Parameter Name="nro" Type="int" Mode="In" />
+    <Parameter Name="obs" Type="text" Mode="In" />
+    <Parameter Name="DepositoOrigenId" Type="int" Mode="In" />
+    <Parameter Name="SectorDepositoOrigenId" Type="int" Mode="In" />
+    <Parameter Name="DepositoDestinoId" Type="int" Mode="In" />
+    <Parameter Name="SectorDepositoDestinoId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ActualizaMailProveedor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codEmp" Type="varchar" Mode="In" />
+    <Parameter Name="proveed" Type="varchar" Mode="In" />
+    <Parameter Name="mail" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="CtaContable" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ExcluyeItemsReqInterno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codEmp" Type="varchar" Mode="In" />
+    <Parameter Name="idReq" Type="int" Mode="In" />
+    <Parameter Name="nroItem" Type="int" Mode="In" />
+    <Parameter Name="Motivo" Type="varchar" Mode="In" />
+    <Parameter Name="usuario" Type="varchar" Mode="In" />
+    <Parameter Name="excluido" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="FinalizaRequerimientoInterno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codEmp" Type="varchar" Mode="In" />
+    <Parameter Name="requerimiento_id" Type="int" Mode="In" />
+    <Parameter Name="motivo" Type="text" Mode="In" />
+    <Parameter Name="fechaFinalizacion" Type="datetime" Mode="In" />
+    <Parameter Name="usuarioFinaliza" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="H_CondPagoProveed" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codEmp" Type="varchar" Mode="In" />
+    <Parameter Name="Proveed" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="OrdenCompra_Indicador_Mensual" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Empresa" Type="varchar" Mode="In" />
+    <Parameter Name="Anio" Type="int" Mode="In" />
+    <Parameter Name="Mes" Type="int" Mode="In" />
+    <Parameter Name="Dias" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ORDENCOMPRA_PARA_MODIFICAR_FECHA_BUSCADOR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codEmp" Type="varchar" Mode="In" />
+    <Parameter Name="Nro" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ORDENCOMPRA_PENDIENTES_DE_ENTREGA_BUSCADOR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codEmp" Type="varchar" Mode="In" />
+    <Parameter Name="Nro" Type="int" Mode="In" />
+  </Function>
+  <Function Name="OrdenCompraAbierta_SegunFacturaBejerman" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Empresa" Type="varchar" Mode="In" />
+    <Parameter Name="Dias" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ordenCompraSinStock_ParaModificar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codEmp" Type="varchar" Mode="In" />
+    <Parameter Name="ordenCompra_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="REQUERIMIENTOS_INTERNO_PARA_MODIFICAR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Sector" Type="int" Mode="In" />
+    <Parameter Name="idUsuario" Type="int" Mode="In" />
+  </Function>
+  <Function Name="TraeProveedorEmpresa" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codEmp" Type="varchar" Mode="In" />
+    <Parameter Name="Proveed" Type="varchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="codEmp" Type="varchar" MaxLength="4" />
+          <Property Name="RazonSocial" Type="varchar" MaxLength="40" />
+          <Property Name="Email" Type="varchar" MaxLength="500" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="TraeRequerimientoInternoItem" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codEmp" Type="varchar" Mode="In" />
+    <Parameter Name="requerimiento_id" Type="int" Mode="In" />
+    <Parameter Name="nivelAut_id" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="StaCatalinaModelStoreContainer">
+    <EntitySet Name="comOrdenCompra" EntityType="Self.comOrdenCompra" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="comOrdenCompraDetalle" EntityType="Self.comOrdenCompraDetalle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="comRequerimientoInterno" EntityType="Self.comRequerimientoInterno" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="comRequerimientoInternoItem" EntityType="Self.comRequerimientoInternoItem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="comRequerimientoItem" EntityType="Self.comRequerimientoItem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="comUsuarioEnviaMail" EntityType="Self.comUsuarioEnviaMail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="stkMoviReqInterno" EntityType="Self.stkMoviReqInterno" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Usuarios" EntityType="Self.TBL_Usuarios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="varEmpresa" EntityType="Self.varEmpresa" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_comOrdenCompraDetalle_comOrdenCompra" Association="Self.FK_comOrdenCompraDetalle_comOrdenCompra">
+      <End Role="comOrdenCompra" EntitySet="comOrdenCompra" />
+      <End Role="comOrdenCompraDetalle" EntitySet="comOrdenCompraDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_comRequerimientoInternoItem_comRequerimiento" Association="Self.FK_comRequerimientoInternoItem_comRequerimiento">
+      <End Role="comRequerimientoInterno" EntitySet="comRequerimientoInterno" />
+      <End Role="comRequerimientoInternoItem" EntitySet="comRequerimientoInternoItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_comUsuarioEnviaMail_TBL_Usuarios" Association="Self.FK_comUsuarioEnviaMail_TBL_Usuarios">
+      <End Role="TBL_Usuarios" EntitySet="TBL_Usuarios" />
+      <End Role="comUsuarioEnviaMail" EntitySet="comUsuarioEnviaMail" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

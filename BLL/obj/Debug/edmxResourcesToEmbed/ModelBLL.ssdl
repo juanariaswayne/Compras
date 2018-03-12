@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BLLModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="comOrdenCompra">
+    <Key>
+      <PropertyRef Name="codEmp" />
+      <PropertyRef Name="ordenCompra_id" />
+    </Key>
+    <Property Name="codEmp" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="ordenCompra_id" Type="int" Nullable="false" />
+    <Property Name="codEmpRequerimiento" Type="varchar" MaxLength="4" />
+    <Property Name="requerimiento_id" Type="int" />
+    <Property Name="fecha" Type="datetime" Nullable="false" />
+    <Property Name="proveed_id" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="sectorRequerimiento_id" Type="int" />
+    <Property Name="estado_id" Type="int" Nullable="false" />
+    <Property Name="tipoOc_id" Type="int" Nullable="false" />
+    <Property Name="modificaCosto" Type="int" Nullable="false" />
+    <Property Name="condicionPago_id" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="obs" Type="text" Nullable="false" />
+    <Property Name="usuario" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="usuarioAutoriza" Type="varchar" MaxLength="20" />
+    <Property Name="PDC" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="fechaAutorizacion" Type="datetime" />
+    <Property Name="motivoFinaliz_Anulacion" Type="text" />
+    <Property Name="fechaFinaliz_Anulacion" Type="datetime" />
+    <Property Name="pedidoDiario" Type="bit" />
+    <Property Name="proveed_Original" Type="varchar" MaxLength="6" />
+    <Property Name="sectorEntrega_id" Type="int" />
+    <Property Name="tipoProrrateo" Type="smallint" />
+  </EntityType>
+  <EntityType Name="comOrdenCompraDetalle">
+    <Key>
+      <PropertyRef Name="codEmp" />
+      <PropertyRef Name="ordenCompra_id" />
+      <PropertyRef Name="nroItem" />
+    </Key>
+    <Property Name="codEmp" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="ordenCompra_id" Type="int" Nullable="false" />
+    <Property Name="nroItem" Type="int" Nullable="false" />
+    <Property Name="nivelAuto_id" Type="int" Nullable="false" />
+    <Property Name="importe" Type="float" Nullable="false" />
+    <Property Name="detalle" Type="text" Nullable="false" />
+    <Property Name="cantidad" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="stkMoviReqInterno">
+    <Key>
+      <PropertyRef Name="codEmpStk" />
+      <PropertyRef Name="comprobanteStk" />
+      <PropertyRef Name="nroItemStk" />
+      <PropertyRef Name="codEmp" />
+      <PropertyRef Name="requerimiento_id" />
+      <PropertyRef Name="nroItem" />
+    </Key>
+    <Property Name="codEmpStk" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="comprobanteStk" Type="int" Nullable="false" />
+    <Property Name="nroItemStk" Type="int" Nullable="false" />
+    <Property Name="codEmp" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="requerimiento_id" Type="int" Nullable="false" />
+    <Property Name="nroItem" Type="int" Nullable="false" />
+    <Property Name="uniMed" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="cantEnviada" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="remSucursal" Type="varchar" MaxLength="4" Nullable="false" />
+    <Property Name="remComprobante" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_comOrdenCompraDetalle_comOrdenCompra">
+    <End Role="comOrdenCompra" Type="Self.comOrdenCompra" Multiplicity="1" />
+    <End Role="comOrdenCompraDetalle" Type="Self.comOrdenCompraDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="comOrdenCompra">
+        <PropertyRef Name="codEmp" />
+        <PropertyRef Name="ordenCompra_id" />
+      </Principal>
+      <Dependent Role="comOrdenCompraDetalle">
+        <PropertyRef Name="codEmp" />
+        <PropertyRef Name="ordenCompra_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="ExisteItemMoviReqInterno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="codEmp" Type="varchar" Mode="In" />
+    <Parameter Name="requerimiento_id" Type="int" Mode="In" />
+    <Parameter Name="nroItem" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="BLLModelStoreContainer">
+    <EntitySet Name="comOrdenCompra" EntityType="Self.comOrdenCompra" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="comOrdenCompraDetalle" EntityType="Self.comOrdenCompraDetalle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="stkMoviReqInterno" EntityType="Self.stkMoviReqInterno" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_comOrdenCompraDetalle_comOrdenCompra" Association="Self.FK_comOrdenCompraDetalle_comOrdenCompra">
+      <End Role="comOrdenCompra" EntitySet="comOrdenCompra" />
+      <End Role="comOrdenCompraDetalle" EntitySet="comOrdenCompraDetalle" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

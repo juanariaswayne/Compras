@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SBDAEGESModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="USR_ArticuloSubCuenta">
+    <Key>
+      <PropertyRef Name="subCuenta" />
+    </Key>
+    <Property Name="subCuenta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="esDeProducto" Type="bit" Nullable="false" />
+    <Property Name="Concepto" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="USR_ConceptoSubCuenta">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="concepto" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="subCuenta" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USR_ControlProrrateoEmpresaEGES">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Anio" Type="int" Nullable="false" />
+    <Property Name="Mes" Type="int" Nullable="false" />
+    <Property Name="FechaProrrateoEmpresa" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SBDAEGESModelStoreContainer">
+    <EntitySet Name="USR_ArticuloSubCuenta" EntityType="Self.USR_ArticuloSubCuenta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USR_ConceptoSubCuenta" EntityType="Self.USR_ConceptoSubCuenta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USR_ControlProrrateoEmpresaEGES" EntityType="Self.USR_ControlProrrateoEmpresaEGES" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

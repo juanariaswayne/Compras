@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BLLModelStoreContainer" CdmEntityContainer="BLLEntities">
+    <EntitySetMapping Name="stkMoviReqInterno">
+      <EntityTypeMapping TypeName="BLLModel.stkMoviReqInterno">
+        <MappingFragment StoreEntitySet="stkMoviReqInterno">
+          <ScalarProperty Name="codEmpStk" ColumnName="codEmpStk" />
+          <ScalarProperty Name="comprobanteStk" ColumnName="comprobanteStk" />
+          <ScalarProperty Name="nroItemStk" ColumnName="nroItemStk" />
+          <ScalarProperty Name="codEmp" ColumnName="codEmp" />
+          <ScalarProperty Name="requerimiento_id" ColumnName="requerimiento_id" />
+          <ScalarProperty Name="nroItem" ColumnName="nroItem" />
+          <ScalarProperty Name="uniMed" ColumnName="uniMed" />
+          <ScalarProperty Name="cantEnviada" ColumnName="cantEnviada" />
+          <ScalarProperty Name="remSucursal" ColumnName="remSucursal" />
+          <ScalarProperty Name="remComprobante" ColumnName="remComprobante" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="ExisteItemMoviReqInterno" FunctionName="BLLModel.Store.ExisteItemMoviReqInterno">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="BLLModel.ExisteItemMoviReqInterno_Result">
+          <ScalarProperty Name="remSucursal" ColumnName="remSucursal" />
+          <ScalarProperty Name="remComprobante" ColumnName="remComprobante" />
+          <ScalarProperty Name="cantEnviada" ColumnName="cantEnviada" />
+          <ScalarProperty Name="uniMed" ColumnName="uniMed" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="comOrdenCompra">
+      <EntityTypeMapping TypeName="BLLModel.comOrdenCompra">
+        <MappingFragment StoreEntitySet="comOrdenCompra">
+          <ScalarProperty Name="tipoProrrateo" ColumnName="tipoProrrateo" />
+          <ScalarProperty Name="sectorEntrega_id" ColumnName="sectorEntrega_id" />
+          <ScalarProperty Name="proveed_Original" ColumnName="proveed_Original" />
+          <ScalarProperty Name="pedidoDiario" ColumnName="pedidoDiario" />
+          <ScalarProperty Name="fechaFinaliz_Anulacion" ColumnName="fechaFinaliz_Anulacion" />
+          <ScalarProperty Name="motivoFinaliz_Anulacion" ColumnName="motivoFinaliz_Anulacion" />
+          <ScalarProperty Name="fechaAutorizacion" ColumnName="fechaAutorizacion" />
+          <ScalarProperty Name="PDC" ColumnName="PDC" />
+          <ScalarProperty Name="usuarioAutoriza" ColumnName="usuarioAutoriza" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="obs" ColumnName="obs" />
+          <ScalarProperty Name="condicionPago_id" ColumnName="condicionPago_id" />
+          <ScalarProperty Name="modificaCosto" ColumnName="modificaCosto" />
+          <ScalarProperty Name="tipoOc_id" ColumnName="tipoOc_id" />
+          <ScalarProperty Name="estado_id" ColumnName="estado_id" />
+          <ScalarProperty Name="sectorRequerimiento_id" ColumnName="sectorRequerimiento_id" />
+          <ScalarProperty Name="proveed_id" ColumnName="proveed_id" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="requerimiento_id" ColumnName="requerimiento_id" />
+          <ScalarProperty Name="codEmpRequerimiento" ColumnName="codEmpRequerimiento" />
+          <ScalarProperty Name="ordenCompra_id" ColumnName="ordenCompra_id" />
+          <ScalarProperty Name="codEmp" ColumnName="codEmp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="comOrdenCompraDetalle">
+      <EntityTypeMapping TypeName="BLLModel.comOrdenCompraDetalle">
+        <MappingFragment StoreEntitySet="comOrdenCompraDetalle">
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="detalle" ColumnName="detalle" />
+          <ScalarProperty Name="importe" ColumnName="importe" />
+          <ScalarProperty Name="nivelAuto_id" ColumnName="nivelAuto_id" />
+          <ScalarProperty Name="nroItem" ColumnName="nroItem" />
+          <ScalarProperty Name="ordenCompra_id" ColumnName="ordenCompra_id" />
+          <ScalarProperty Name="codEmp" ColumnName="codEmp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

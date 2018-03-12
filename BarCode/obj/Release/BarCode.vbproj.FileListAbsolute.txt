@@ -1,0 +1,9 @@
+C:\Proyectos\Compras\BarCode\bin\Release\BarCode.dll
+C:\Proyectos\Compras\BarCode\bin\Release\BarCode.pdb
+C:\Proyectos\Compras\BarCode\bin\Release\BarCode.xml
+C:\Proyectos\Compras\BarCode\bin\Release\itextsharp.dll
+C:\Proyectos\Compras\BarCode\obj\Release\BarCode.Resources.resources
+C:\Proyectos\Compras\BarCode\obj\Release\BarCode.vbproj.GenerateResource.Cache
+C:\Proyectos\Compras\BarCode\obj\Release\BarCode.dll
+C:\Proyectos\Compras\BarCode\obj\Release\BarCode.xml
+C:\Proyectos\Compras\BarCode\obj\Release\BarCode.pdb

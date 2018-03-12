@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SBDARSCModelStoreContainer" CdmEntityContainer="SBDARSCEntities">
+    <EntitySetMapping Name="USR_ArticuloSubCuenta">
+      <EntityTypeMapping TypeName="SBDARSCModel.USR_ArticuloSubCuenta">
+        <MappingFragment StoreEntitySet="USR_ArticuloSubCuenta">
+          <ScalarProperty Name="Concepto" ColumnName="Concepto" />
+          <ScalarProperty Name="subCuenta" ColumnName="subCuenta" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USR_ConceptoSubCuenta">
+      <EntityTypeMapping TypeName="SBDARSCModel.USR_ConceptoSubCuenta">
+        <MappingFragment StoreEntitySet="USR_ConceptoSubCuenta">
+          <ScalarProperty Name="subCuenta" ColumnName="subCuenta" />
+          <ScalarProperty Name="concepto" ColumnName="concepto" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="TraeConceptoCtaContable" FunctionName="SBDARSCModel.Store.TraeConceptoCtaContable">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SBDARSCModel.TraeConceptoCtaContable_Result">
+          <ScalarProperty Name="con_Cod" ColumnName="con_Cod" />
+          <ScalarProperty Name="con_Desc" ColumnName="con_Desc" />
+          <ScalarProperty Name="cappla_CuentaCpra" ColumnName="cappla_CuentaCpra" />
+          <ScalarProperty Name="cta_descrip" ColumnName="cta_descrip" />
+          <ScalarProperty Name="DescripSubCuenta" ColumnName="DescripSubCuenta" />
+          <ScalarProperty Name="subCuenta" ColumnName="subCuenta" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="USR_ControlProrrateoEmpresa">
+      <EntityTypeMapping TypeName="SBDARSCModel.USR_ControlProrrateoEmpresa">
+        <MappingFragment StoreEntitySet="USR_ControlProrrateoEmpresa">
+          <ScalarProperty Name="Mes" ColumnName="Mes" />
+          <ScalarProperty Name="Anio" ColumnName="Anio" />
+          <ScalarProperty Name="FechaProrrateoEmpresa" ColumnName="FechaProrrateoEmpresa" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

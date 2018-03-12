@@ -1,0 +1,58 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+BarCode
+</name>
+</assembly>
+<members>
+<member name="T:BarCode.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:BarCode.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:BarCode.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="M:BarCode.BarCode.EAN13CalcChecksum(System.String)">
+ <summary>
+ Esta función devuelve el dígito de control para un código EAN13
+ </summary>
+ <param name="_code">Código EAN de 12 *** DOCE *** números</param>
+ <returns>Se devuelve como un string el digito 13 que es el dígito de control</returns>
+ <remarks></remarks>
+</member>
+<member name="M:BarCode.BarCode.CodeEAN13AutoGenerateChecksum(System.String,System.Boolean,System.Single,System.Boolean,System.Boolean)">
+ <summary>
+ Genera el código de barras EAN13 y auto-calcula el dígito de control
+ </summary>
+ <param name="_code">Código de 12 *** DOCE *** números</param>
+ <param name="GenerateChecksum"></param>
+ <param name="ChecksumText"></param>
+ <param name="Height"></param>
+ <param name="PrintTextInCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:BarCode.BarCode.CodeEAN13(System.String,System.Boolean,System.Single,System.Boolean,System.Boolean)">
+ <summary>
+ Genera el código de barras EAN13. No se verifica el checksum
+ </summary>
+ <param name="_code">Código de 13 *** TRECE *** números</param>
+ <param name="GenerateChecksum"></param>
+ <param name="ChecksumText"></param>
+ <param name="Height"></param>
+ <param name="PrintTextInCode"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

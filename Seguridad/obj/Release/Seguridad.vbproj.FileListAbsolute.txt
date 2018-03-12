@@ -1,0 +1,8 @@
+C:\Proyectos\Compras\Seguridad\bin\Release\Seguridad.dll
+C:\Proyectos\Compras\Seguridad\bin\Release\Seguridad.pdb
+C:\Proyectos\Compras\Seguridad\bin\Release\Seguridad.xml
+C:\Proyectos\Compras\Seguridad\obj\Release\Seguridad.Resources.resources
+C:\Proyectos\Compras\Seguridad\obj\Release\Seguridad.vbproj.GenerateResource.Cache
+C:\Proyectos\Compras\Seguridad\obj\Release\Seguridad.dll
+C:\Proyectos\Compras\Seguridad\obj\Release\Seguridad.xml
+C:\Proyectos\Compras\Seguridad\obj\Release\Seguridad.pdb
