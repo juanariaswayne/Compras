@@ -118,6 +118,13 @@
           <Property Name="Id_Usuario" Type="int" Nullable="false" />
           <Property Name="Id_Usuario_EnviaMail" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="stkMotivoAjuste">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
         <EntityType Name="stkMoviReqInterno">
           <Key>
             <PropertyRef Name="codEmpStk" />
@@ -284,6 +291,7 @@
           <EntitySet Name="comRequerimientoInternoItem" EntityType="Self.comRequerimientoInternoItem" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="comRequerimientoItem" EntityType="Self.comRequerimientoItem" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="comUsuarioEnviaMail" EntityType="Self.comUsuarioEnviaMail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="stkMotivoAjuste" EntityType="Self.stkMotivoAjuste" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="stkMoviReqInterno" EntityType="Self.stkMoviReqInterno" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_Usuarios" EntityType="Self.TBL_Usuarios" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="varEmpresa" EntityType="Self.varEmpresa" Schema="dbo" store:Type="Tables" />
@@ -409,6 +417,7 @@
             <Parameter Name="codEmp" Mode="In" Type="String" />
             <Parameter Name="ordenCompra_id" Mode="In" Type="Int32" />
           </FunctionImport>
+          <EntitySet Name="stkMotivoAjuste" EntityType="StaCatalinaModel.stkMotivoAjuste" />
         </EntityContainer>
         <ComplexType Name="REQUERIMIENTOS_INTERNO_PARA_MODIFICAR_Result">
           <Property Type="String" Name="codEmp" Nullable="false" MaxLength="4" />
@@ -746,6 +755,13 @@
           <Property Type="String" Name="usuarioAutoriza" Nullable="false" MaxLength="20" />
           <Property Type="Int16" Name="tipoProrrateo" Nullable="true" />
         </ComplexType>
+        <EntityType Name="stkMotivoAjuste">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1058,6 +1074,14 @@
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
+          <EntitySetMapping Name="stkMotivoAjuste">
+            <EntityTypeMapping TypeName="StaCatalinaModel.stkMotivoAjuste">
+              <MappingFragment StoreEntitySet="stkMotivoAjuste">
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

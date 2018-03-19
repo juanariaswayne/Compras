@@ -1485,8 +1485,8 @@ Namespace Tables
                     existeProd.WhereParameter.Clear()
                 Next
 
-                'VERIFICO SI TIENE ARTICULOS CON VTOS....
-                If _itemsVtos.Count > 0 Then
+                'VERIFICO SI TIENE ARTICULOS CON VTOS....Y SI ES UNA ENTRADA... 
+                If _itemsVtos.Count > 0 And _itemMovimiento.TIPOMOV_ID = 1 Then
                     Dim newItemVtos As New DAL.Tables.STKVENCIMIENTO(NewMov)
                     Dim _itemV As New Entities.Tables.STKVENCIMIENTO
                     For Each _vtos As Entities.Tables.STKVENCIMIENTO In _itemsVtos
@@ -1501,6 +1501,18 @@ Namespace Tables
                         newItemVtos.Add(_itemV)
                     Next
                 End If
+                ' PUEDE SER QUE SEA UN MOVIMIENTO DE SALIDA, DE AJUSTE....
+                'If _itemsVtos.Count > 0 And _itemMovimiento.TIPOMOV_ID = 2 And _itemMovimiento.SUBTIPOMOV_ID = 3 Then
+                '    Dim newItemVtos As New DAL.Procedures.AJUSTEVENCIMIENTOS(NewMov)
+                '    'VOY ACTUALIZANDO LOS VTOS Y CANTIDADES
+                '    For Each _vtos As Entities.Tables.STKVENCIMIENTO In _itemsVtos
+
+                '        newItemVtos.AjusteVtos(_vtos.ARTICULO_ID, _vtos.CANTIDAD, _vtos.VTO)
+                '    Next
+
+                'End If
+
+
 
                 'TAMBIEN SI ES UN CAMBIO DE DEPOSITO, GENERO LA TABLE REMITO
                 If _itemMovimiento.TIPOMOV_ID = 2 And _itemMovimiento.SUBTIPOMOV_ID = 2 Then
@@ -1527,6 +1539,150 @@ Namespace Tables
 
 
                 End If
+
+
+                NewMov.EndTransaction(True)
+                'SI ES UN INGRESO DE STOCK COMUN.. DEVUELVO CERO
+                Return _proxNroRemito
+
+            Catch ex As Exception
+                NewMov.EndTransaction(False)
+                Return False
+            End Try
+
+
+        End Function
+
+        Public Overloads Function GenerarMovAjuste(ByVal _itemsInventario As List(Of Entities.Tables.STKINVENTARIO), ByVal _itemMovimiento As Entities.Tables.STKMOVIMIENTO, ByVal _itemsMov As List(Of Entities.Tables.STKMOVIMIENTOITEM), ByVal _itemsVtos As List(Of Entities.Tables.STKVENCIMIENTO)) As Integer
+            'RECUPERO PROXIMO NRO DE COMPROBANTE
+            Dim _proximoID As Integer
+            Dim _prox As New DAL.Procedures.MAXCOMPROBANTESTKMOVIMIENTO
+            Dim _proxNroRemito As Integer
+
+            If _prox.Items(_itemMovimiento.CODEMP).Count > 0 Then
+                _proximoID = _prox.Resultset(0).comprobante + 1
+
+
+            Else
+                _proximoID = 1
+            End If
+            'FIN PROXIMO NRO COMPROBANTE
+
+            Dim NewMov As New DAL.Tables.STKMOVIMIENTO
+
+            Try
+                'EMPIEZO TRANSACCION
+                NewMov.BeginTransaction()
+                'COMPLETO EL OBJETO
+                _itemMovimiento.COMPROBANTE = _proximoID
+                '*** INSERTO EN TABLA STKMOVIMIENTOS ***
+                NewMov.Add(_itemMovimiento)
+
+                'AHORA INSERTO EN LOS ITEMS
+                Dim newItemMov As New DAL.Tables.STKMOVIMIENTOITEM(NewMov)
+                Dim newitemsMov As New Entities.Tables.STKMOVIMIENTOITEM
+
+                Dim newItemStkEnTransito As New DAL.Tables.STKENTRANSITO(NewMov)
+                Dim newitemsTransito As New Entities.Tables.STKENTRANSITO
+
+                Dim i As Integer
+                i = 1
+                For Each _itemcuerpo As Entities.Tables.STKMOVIMIENTOITEM In _itemsMov
+                    newitemsMov = New Entities.Tables.STKMOVIMIENTOITEM
+
+                    newitemsMov.CODEMP = _itemcuerpo.CODEMP
+                    newitemsMov.COMPROBANTE = _proximoID
+                    newitemsMov.NROITEM = i
+                    newitemsMov.ARTICULO_ID = _itemcuerpo.ARTICULO_ID
+                    newitemsMov.UNIMED = _itemcuerpo.UNIMED
+                    newitemsMov.CANTIDAD = _itemcuerpo.CANTIDAD
+                    newitemsMov.COSTOUNI = 0 'VER ESTO SI ESTA BIEN
+                    'VOY GUARDANDO LOS ITEMS
+                    newItemMov.Add(newitemsMov)
+
+                    'VERIFICO, SI ES UN CAMBIO DE DEPOSITO... ENTONCES REGISTRO EN EL DEPOSITO TRANSITO Y EN STKREMITOS
+
+                    If _itemMovimiento.TIPOMOV_ID = 2 And _itemMovimiento.SUBTIPOMOV_ID = 2 Then
+                        newitemsTransito = New Entities.Tables.STKENTRANSITO
+
+                        newitemsTransito.CODEMP = _itemcuerpo.CODEMP
+                        newitemsTransito.COMPROBANTE = _proximoID
+                        newitemsTransito.NROITEM = i
+                        newitemsTransito.CANTORIGINAL = _itemcuerpo.CANTIDAD
+                        newitemsTransito.CANTRECIBIDA = 0
+                        newitemsTransito.UNIMED = _itemcuerpo.UNIMED
+                        newitemsTransito.ESTADO_ID = 0 'NO SE USA
+                        newitemsTransito.USUARIOGENERA = _itemMovimiento.USUARIO
+                        'VOY INSERTANDO LOS ITEMS
+                        newItemStkEnTransito.Add(newitemsTransito)
+
+                    End If
+
+                    i = i + 1
+                Next
+                i = 1
+
+                'AHORA INSERTO EN LOS ITEMS EN STKINVENTARIO, SI EL PRODUCTO EXISTE, ACTUALIZO EL STOCK SINO CREO EL PRODUCTO
+                Dim newItemInv As New DAL.Tables.STKINVENTARIO(NewMov)
+                Dim newitemsInv As New Entities.Tables.STKINVENTARIO
+                Dim Descontar As New DAL.Procedures.DESCUENTAINVENTARIOAJUSTE(NewMov)
+                Dim existeProd As New BLL.Tables.STKINVENTARIO
+
+                For Each _itemcuerpo2 As Entities.Tables.STKINVENTARIO In _itemsInventario
+                    newitemsInv = New Entities.Tables.STKINVENTARIO
+
+
+                    newitemsInv.ARTICULO_ID = _itemcuerpo2.ARTICULO_ID
+                    newitemsInv.DEPOSITO_ID = _itemcuerpo2.DEPOSITO_ID
+                    newitemsInv.SECTOR_ID = _itemcuerpo2.SECTOR_ID 'NO SE USA EN EL STORED
+                    newitemsInv.UNIMED = _itemcuerpo2.UNIMED
+
+                    If _itemMovimiento.TIPOMOV_ID = 1 Then
+                        newitemsInv.CANTIDAD = _itemcuerpo2.CANTIDAD
+                    Else
+                        newitemsInv.CANTIDAD = (_itemcuerpo2.CANTIDAD * -1) 'PORQUE ESTOY RESTANDO DEL STOCK, LO ENVIO EN NEGATIVO, EL STORED... RESTA O SUMA
+                    End If
+
+                    'VERIFICO SI EXISTE ESTE PRODUCTO>
+
+                    If existeProd.ItemList(_itemcuerpo2.ARTICULO_ID, _itemcuerpo2.DEPOSITO_ID).Count > 0 Then
+                        Descontar.Descontar(_itemMovimiento.DEPOSITOORIGEN_ID, _itemcuerpo2.ARTICULO_ID, newitemsInv.CANTIDAD)
+
+                    Else
+                        'VOY GUARDANDO LOS ITEMS, **** SI ESTE ARTICULO LLEVA VTO. VOY DESCONTANDO TAMBIEN DE LA TABLA STKVENCIMIENTOS... DE LA FECHA MAS PROXIMA ******
+                        newItemInv.Add(newitemsInv)
+                    End If
+                    i = i + 1
+                    existeProd.WhereParameter.Clear()
+                Next
+
+                'VERIFICO SI TIENE ARTICULOS CON VTOS....Y SI ES UNA ENTRADA... 
+                If _itemsVtos.Count > 0 And _itemMovimiento.TIPOMOV_ID = 1 Then
+                    Dim newItemVtos As New DAL.Tables.STKVENCIMIENTO(NewMov)
+                    Dim _itemV As New Entities.Tables.STKVENCIMIENTO
+                    For Each _vtos As Entities.Tables.STKVENCIMIENTO In _itemsVtos
+                        _itemV = New Entities.Tables.STKVENCIMIENTO
+                        _itemV.CODEMP = _itemMovimiento.CODEMP
+                        _itemV.COMPROBANTE = _proximoID
+                        _itemV.ARTICULO_ID = _vtos.ARTICULO_ID
+                        _itemV.CANTIDAD = _vtos.CANTIDAD
+                        _itemV.ENSTOCK = _vtos.CANTIDAD
+                        _itemV.VTO = _vtos.VTO
+                        'VOY GUARDANDO EN TABLA 
+                        newItemVtos.Add(_itemV)
+                    Next
+                End If
+                ' PUEDE SER QUE SEA UN MOVIMIENTO DE SALIDA, DE AJUSTE....
+                If _itemsVtos.Count > 0 And _itemMovimiento.TIPOMOV_ID = 2 And _itemMovimiento.SUBTIPOMOV_ID = 3 Then
+                    Dim newItemVtos As New DAL.Procedures.AJUSTEVENCIMIENTOS(NewMov)
+                    'VOY ACTUALIZANDO LOS VTOS Y CANTIDADES
+                    For Each _vtos As Entities.Tables.STKVENCIMIENTO In _itemsVtos
+
+                        newItemVtos.AjusteVtos(_vtos.ARTICULO_ID, _vtos.CANTIDAD, _vtos.VTO)
+                    Next
+
+                End If
+
 
 
                 NewMov.EndTransaction(True)

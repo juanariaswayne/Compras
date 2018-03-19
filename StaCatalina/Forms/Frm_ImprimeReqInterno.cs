@@ -10,7 +10,7 @@ using CrystalDecisions.CrystalReports.Engine;
 using System.Configuration;
 namespace StaCatalina.Forms
 {
-    public partial class FrmImprimeReqInterno : StaCatalina.Plantilla
+    public partial class Frm_ImprimeReqInterno : StaCatalina.Plantilla
     {
         #region Variables
         private bool lectura;
@@ -20,7 +20,7 @@ namespace StaCatalina.Forms
         #endregion
 
         #region Funciones
-        public FrmImprimeReqInterno()
+        public Frm_ImprimeReqInterno()
         {
             InitializeComponent();
         }
@@ -64,7 +64,7 @@ namespace StaCatalina.Forms
                 ReportDocument objReport = new ReportDocument();
 
                 //String reportPath = Application.StartupPath + @"\Reporting\" + "IngresoCompras_Sintetico.rpt";
-                String reportPath = ConfigurationManager.AppSettings["Reports"] + "\\Reporting\\" + "InformeRequerimientos.rpt";
+                String reportPath = ConfigurationManager.AppSettings["Reports"] + "\\Reporting\\" + "InformeRequerimientosInternos.rpt";
                 objReport.Load(reportPath);
                 objReport.Refresh();
                 objReport.ReportOptions.EnableSaveDataWithReport = false;

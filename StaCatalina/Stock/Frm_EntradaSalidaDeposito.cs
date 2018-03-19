@@ -311,7 +311,15 @@ namespace StaCatalina.Stock
                     ParametroField.CurrentValues.Add(ParametroValue);
                     Parametros.Add(ParametroField);
 
-                    _Reporte.Parameters = Parametros;
+                    //6to PARAMETRO
+                    ParametroField = new ParameterField();
+                    ParametroValue = new ParameterDiscreteValue();
+                    ParametroField.Name = "@StockInicial";
+                    ParametroValue.Value = (checkBoxInicial.Checked) ? 1:0;
+                    ParametroField.CurrentValues.Add(ParametroValue);
+                    Parametros.Add(ParametroField);
+
+                _Reporte.Parameters = Parametros;
                     _Reporte.Reporte = objReport;
                     _Reporte.Show();
 

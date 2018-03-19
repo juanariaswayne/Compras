@@ -81,6 +81,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="AjusteVencimientos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Articulo" Type="varchar" Mode="In" />
+          <Parameter Name="Cantidad" Type="numeric" Mode="In" />
+          <Parameter Name="vto" Type="datetime" Mode="In" />
+        </Function>
         <Function Name="ExisteItemMoviReqInterno" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="codEmp" Type="varchar" Mode="In" />
           <Parameter Name="requerimiento_id" Type="int" Mode="In" />
@@ -132,6 +137,11 @@
             <End Role="comOrdenCompra" EntitySet="comOrdenCompra" />
             <End Role="comOrdenCompraDetalle" EntitySet="comOrdenCompraDetalle" />
           </AssociationSet>
+          <FunctionImport Name="AjusteVencimientos">
+            <Parameter Name="Articulo" Mode="In" Type="String" />
+            <Parameter Name="Cantidad" Mode="In" Type="Decimal" />
+            <Parameter Name="vto" Mode="In" Type="DateTime" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="ExisteItemMoviReqInterno_Result">
           <Property Type="String" Name="remSucursal" Nullable="false" MaxLength="4" />
@@ -270,6 +280,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="AjusteVencimientos" FunctionName="BLLModel.Store.AjusteVencimientos" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

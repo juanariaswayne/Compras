@@ -2415,7 +2415,6 @@ Namespace Tables
         End Property
 
     End Class '
-
     Partial Public Class STKMOVIMIENTO
         Inherits DAL.Tables.STKMOVIMIENTO
         Public Overloads Function ItemList() As List(Of Entities.Tables.STKMOVIMIENTO)
@@ -2436,7 +2435,7 @@ Namespace Tables
             Return MyBase.Add(Item)
         End Function
 
-        Public Overloads Function AddItem(ByVal codemp As System.String, ByVal comprobante As System.Int32, ByVal tipomov_id As System.Int32, ByVal subtipomov_id As System.Int32, ByVal fechamov As System.DateTime, ByVal depositoorigen_id As System.Int32, ByVal sectororigen_id As System.Int32, ByVal depositodestino_id As System.Int32, ByVal sectordestino_id As System.Int32, ByVal usuario As System.String, ByVal anulado As System.Int32, ByVal obs As System.String) As Entities.Tables.STKMOVIMIENTO
+        Public Overloads Function AddItem(ByVal codemp As System.String, ByVal comprobante As System.Int32, ByVal tipomov_id As System.Int32, ByVal subtipomov_id As System.Int32, ByVal fechamov As System.DateTime, ByVal depositoorigen_id As System.Int32, ByVal sectororigen_id As System.Int32, ByVal depositodestino_id As System.Int32, ByVal sectordestino_id As System.Int32, ByVal usuario As System.String, ByVal anulado As System.Int32, ByVal obs As System.String, ByVal motivoajuste_id As System.Int32) As Entities.Tables.STKMOVIMIENTO
             Try
                 Dim NewItem As New Entities.Tables.STKMOVIMIENTO
                 With NewItem
@@ -2452,6 +2451,7 @@ Namespace Tables
                     .USUARIO = usuario
                     .ANULADO = anulado
                     .OBS = obs
+                    .MOTIVOAJUSTE_ID = motivoajuste_id
 
                 End With
                 MyBase.Add(NewItem)
@@ -2466,7 +2466,7 @@ Namespace Tables
             Return MyBase.Update(Item)
         End Function
 
-        Public Overloads Function UpdateItem(ByVal codemp As System.String, ByVal comprobante As System.Int32, ByVal tipomov_id As System.Int32, ByVal subtipomov_id As System.Int32, ByVal fechamov As System.DateTime, ByVal depositoorigen_id As System.Int32, ByVal sectororigen_id As System.Int32, ByVal depositodestino_id As System.Int32, ByVal sectordestino_id As System.Int32, ByVal usuario As System.String, ByVal anulado As System.Int32, ByVal obs As System.String) As Boolean
+        Public Overloads Function UpdateItem(ByVal codemp As System.String, ByVal comprobante As System.Int32, ByVal tipomov_id As System.Int32, ByVal subtipomov_id As System.Int32, ByVal fechamov As System.DateTime, ByVal depositoorigen_id As System.Int32, ByVal sectororigen_id As System.Int32, ByVal depositodestino_id As System.Int32, ByVal sectordestino_id As System.Int32, ByVal usuario As System.String, ByVal anulado As System.Int32, ByVal obs As System.String, ByVal motivoajuste_id As System.Int32) As Boolean
             Try
                 Dim NewItem As New Entities.Tables.STKMOVIMIENTO
                 With NewItem
@@ -2482,6 +2482,7 @@ Namespace Tables
                     .USUARIO = usuario
                     .ANULADO = anulado
                     .OBS = obs
+                    .MOTIVOAJUSTE_ID = motivoajuste_id
 
                 End With
                 Return MyBase.Update(NewItem)
@@ -2515,7 +2516,6 @@ Namespace Tables
         End Property
 
     End Class '
-
 
     Partial Public Class STKMOVIMIENTOITEM
         Inherits DAL.Tables.STKMOVIMIENTOITEM

@@ -36,6 +36,7 @@ namespace StaCatalina
         public virtual DbSet<comOrdenCompra> comOrdenCompra { get; set; }
         public virtual DbSet<comRequerimientoItem> comRequerimientoItem { get; set; }
         public virtual DbSet<comOrdenCompraDetalle> comOrdenCompraDetalle { get; set; }
+        public virtual DbSet<stkMotivoAjuste> stkMotivoAjuste { get; set; }
     
         public virtual ObjectResult<REQUERIMIENTOS_INTERNO_PARA_MODIFICAR_Result> REQUERIMIENTOS_INTERNO_PARA_MODIFICAR(Nullable<int> sector, Nullable<int> idUsuario)
         {

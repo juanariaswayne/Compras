@@ -1,6 +1,6 @@
 ﻿namespace StaCatalina.Forms
 {
-    partial class FrmImprimeReqInterno
+    partial class Frm_ImprimeReqInterno
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmImprimeReqInterno));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_ImprimeReqInterno));
             this.toolStripEvents = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonPrint = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonClose = new System.Windows.Forms.ToolStripButton();

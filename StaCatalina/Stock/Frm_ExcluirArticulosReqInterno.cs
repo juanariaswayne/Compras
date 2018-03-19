@@ -348,7 +348,7 @@ namespace StaCatalina.Stock
                      .Where(b => b.codEmp == _codEmpresa && b.requerimiento_id == _reqInt)
                      .FirstOrDefault();
 
-                    if (_usuarioAutorizo.usuarioAutoriza.Trim() != Clases.Usuario.UsuarioLogeado.usuario_Logeado.ToString().Trim())
+                    if (_usuarioAutorizo.usuarioAutoriza.Trim().ToLower() != Clases.Usuario.UsuarioLogeado.usuario_Logeado.ToString().Trim().ToLower())
                     {
                         MessageBox.Show("Usted no puede finalizar este Requerimiento interno, lo debe hacer el usuario: "+ _usuarioAutorizo.usuarioAutoriza , "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
@@ -385,7 +385,10 @@ namespace StaCatalina.Stock
                         labelMotivo.Visible = false;
                         textBoxMotivoFinaliz.Text = string.Empty;
                         textBoxMotivoFinaliz.Visible = false;
+
+                        TraerRequerimientos(Clases.Usuario.EmpresaLogeada.EmpresaIngresada.ToString(), Convert.ToInt32(comboBoxDepositoDelPedido.SelectedValue), Convert.ToInt32(comboBoxSectorDelPedido.SelectedValue));
                     }
+
 
 
                     return;

@@ -38,4 +38,14 @@ Partial Public Class BLLEntities
         Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction(Of ExisteItemMoviReqInterno_Result)("ExisteItemMoviReqInterno", codEmpParameter, requerimiento_idParameter, nroItemParameter)
     End Function
 
+    Public Overridable Function AjusteVencimientos(articulo As String, cantidad As Nullable(Of Decimal), vto As Nullable(Of Date)) As Integer
+        Dim articuloParameter As ObjectParameter = If(articulo IsNot Nothing, New ObjectParameter("Articulo", articulo), New ObjectParameter("Articulo", GetType(String)))
+
+        Dim cantidadParameter As ObjectParameter = If(cantidad.HasValue, New ObjectParameter("Cantidad", cantidad), New ObjectParameter("Cantidad", GetType(Decimal)))
+
+        Dim vtoParameter As ObjectParameter = If(vto.HasValue, New ObjectParameter("vto", vto), New ObjectParameter("vto", GetType(Date)))
+
+        Return DirectCast(Me, IObjectContextAdapter).ObjectContext.ExecuteFunction("AjusteVencimientos", articuloParameter, cantidadParameter, vtoParameter)
+    End Function
+
 End Class

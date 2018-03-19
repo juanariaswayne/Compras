@@ -23143,5 +23143,317 @@ Namespace Procedures
             Public Const MARCA As String = "MARCA"
         End Class ' ColumnNames
     End Class
+    Public Class AJUSTEVENCIMIENTOS
+        Private _exceptionHandling As ExceptionHandlingEnum = ExceptionHandlingEnum.ThrowExceptionHandling
+        Private _transaction As Data.SqlClient.SqlTransaction
+        Private _connectionstring As String = Nothing
+        Private _commandTimeOut As Integer = 60
+        Protected _itemList As New ArrayList
+        Public Enum ExceptionHandlingEnum
+            ThrowExceptionHandling
+            RaiseExceptionHandling
+        End Enum
+        Public Event OnError(ByVal ex As Exception)
+        Public Property Transaction() As Data.SqlClient.SqlTransaction
+            Get
+                Return _transaction
+            End Get
+            Set(ByVal value As Data.SqlClient.SqlTransaction)
+                _transaction = value
+            End Set
+        End Property
+        Public Property CommandTimeOut() As Integer
+            Get
+                Return _commandTimeOut
+            End Get
+            Set(ByVal value As Integer)
+                _commandTimeOut = value
+            End Set
+        End Property
+        Public Sub New()
+            MyBase.New()
+            Try
+                _connectionstring = ConfigurationManager.ConnectionStrings("STACATALINA").ConnectionString
+            Catch ex As Exception
+                Select Case Me.ExceptionHandling
+                    Case ExceptionHandlingEnum.RaiseExceptionHandling
+                        RaiseEvent OnError(ex)
+                    Case ExceptionHandlingEnum.ThrowExceptionHandling
+                        Throw (ex)
+                End Select
+            End Try
+        End Sub
 
+        ''' <summary>
+        ''' Constructor para manipular la Transaction
+        ''' </summary>
+        ''' <remarks></remarks>
+        Sub New(ByVal Transaction As System.Data.SqlClient.SqlTransaction)
+            MyBase.New()
+            Try
+                _connectionstring = ConfigurationManager.ConnectionStrings("STACATALINA").ConnectionString
+                _transaction = Transaction
+            Catch ex As Exception
+                Select Case Me.ExceptionHandling
+                    Case ExceptionHandlingEnum.RaiseExceptionHandling
+                        RaiseEvent OnError(ex)
+                    Case ExceptionHandlingEnum.ThrowExceptionHandling
+                        Throw (ex)
+                End Select
+            End Try
+        End Sub
+        ''' <summary>
+        ''' Constructor para manipular la Transaction por Reflexión
+        ''' </summary>
+        ''' <remarks></remarks>
+        Sub New(ByVal TransactionOwner As Object)
+            MyBase.New()
+            Try
+                _connectionstring = ConfigurationManager.ConnectionStrings("STACATALINA").ConnectionString
+                Try
+                    Transaction = TransactionOwner.GetType.GetProperty("Transaction").GetValue(TransactionOwner, Nothing)
+                Catch ex As Exception
+                    RaiseEvent OnError(New Exception("Error al asignar transacción"))
+                End Try
+            Catch ex As Exception
+                Select Case Me.ExceptionHandling
+                    Case ExceptionHandlingEnum.RaiseExceptionHandling
+                        RaiseEvent OnError(ex)
+                    Case ExceptionHandlingEnum.ThrowExceptionHandling
+                        Throw (ex)
+                End Select
+            End Try
+        End Sub
+        Public Property ExceptionHandling() As ExceptionHandlingEnum
+            Get
+                Return _exceptionHandling
+            End Get
+            Set(ByVal value As ExceptionHandlingEnum)
+                _exceptionHandling = value
+            End Set
+        End Property
+
+        Public Function AjusteVtos(ByVal articulo As String, ByVal cantidad As Decimal, ByVal vto As DateTime) As Object
+            Dim dr As System.Data.SqlClient.SqlDataReader = Nothing
+            Dim _sqlErr As String = Nothing
+            Try
+                _itemList.Clear()
+                Dim _commandText As String = "AJUSTEVENCIMIENTOS"
+
+                Dim VArticulo As New SqlParameter("@Articulo", SqlDbType.VarChar, 0, ParameterDirection.Input, False, 0, 0, Nothing, DataRowVersion.Default, articulo)
+                Dim VCantidad As New SqlParameter("@Cantidad", SqlDbType.Decimal, 18, ParameterDirection.Input, False, 0, 0, Nothing, DataRowVersion.Default, cantidad)
+                Dim Vvto As New SqlParameter("@vto", SqlDbType.DateTime, 0, ParameterDirection.Input, False, 0, 0, Nothing, DataRowVersion.Default, vto)
+                Dim params() As SqlParameter = {VArticulo, VCantidad, Vvto}
+                SqlHelper.CommandTimeout = _commandTimeOut
+
+                If _transaction Is Nothing Then
+                    dr = SqlHelper.ExecuteReader(_connectionstring, CommandType.StoredProcedure, _commandText, params)
+                Else
+                    dr = SqlHelper.ExecuteReader(_transaction, CommandType.StoredProcedure, _commandText, params)
+                End If
+
+                While dr.Read
+                    Dim _rowsItemList As New ArrayList
+                    For count As Int32 = 0 To dr.FieldCount - 1
+                        _rowsItemList.Add(New DataField(dr.GetName(count), dr.GetValue(count)))
+
+                    Next
+                    _itemList.Add(_rowsItemList)
+
+                End While
+                Return _itemList
+            Catch ex As System.Exception
+                Select Case Me.ExceptionHandling
+                    Case ExceptionHandlingEnum.RaiseExceptionHandling
+                        RaiseEvent OnError(ex)
+                    Case ExceptionHandlingEnum.ThrowExceptionHandling
+                        Throw (ex)
+                End Select
+                Return Nothing
+            Finally
+                _sqlErr = Nothing
+                If dr IsNot Nothing Then dr.Close()
+            End Try
+        End Function
+
+        ''' <summary>
+        ''' Conserva el resultado de la última consulta.
+        ''' </summary>
+        ''' <returns></returns>
+        ''' <remarks></remarks>
+        Public ReadOnly Property Resultset() As ArrayList
+            Get
+                Return _itemList
+            End Get
+
+        End Property
+
+        Public Class ITEM
+            Inherits Entities.Procedures.AJUSTEVENCIMIENTOS
+        End Class 'ITEM
+
+        ''' Clase         : ColumnNames 
+        ''' Descripción   : Nombres de Columnas de la tabla AJUSTEVENCIMIENTOS
+        ''' Fecha de Creación  : lunes, 19 de marzo de 2018
+        ''' <remarks> Representa los Nombres de Columnas de la tabla AJUSTEVENCIMIENTOS. </remarks>
+        Public Class ColumnNames
+        End Class ' ColumnNames
+    End Class
+
+    Public Class DESCUENTAINVENTARIOAJUSTE
+        Private _exceptionHandling As ExceptionHandlingEnum = ExceptionHandlingEnum.ThrowExceptionHandling
+        Private _transaction As Data.SqlClient.SqlTransaction
+        Private _connectionstring As String = Nothing
+        Private _commandTimeOut As Integer = 60
+        Protected _itemList As New ArrayList
+        Public Enum ExceptionHandlingEnum
+            ThrowExceptionHandling
+            RaiseExceptionHandling
+        End Enum
+        Public Event OnError(ByVal ex As Exception)
+        Public Property Transaction() As Data.SqlClient.SqlTransaction
+            Get
+                Return _transaction
+            End Get
+            Set(ByVal value As Data.SqlClient.SqlTransaction)
+                _transaction = value
+            End Set
+        End Property
+        Public Property CommandTimeOut() As Integer
+            Get
+                Return _commandTimeOut
+            End Get
+            Set(ByVal value As Integer)
+                _commandTimeOut = value
+            End Set
+        End Property
+        Public Sub New()
+            MyBase.New()
+            Try
+                _connectionstring = ConfigurationManager.ConnectionStrings("STACATALINA").ConnectionString
+            Catch ex As Exception
+                Select Case Me.ExceptionHandling
+                    Case ExceptionHandlingEnum.RaiseExceptionHandling
+                        RaiseEvent OnError(ex)
+                    Case ExceptionHandlingEnum.ThrowExceptionHandling
+                        Throw (ex)
+                End Select
+            End Try
+        End Sub
+
+        ''' <summary>
+        ''' Constructor para manipular la Transaction
+        ''' </summary>
+        ''' <remarks></remarks>
+        Sub New(ByVal Transaction As System.Data.SqlClient.SqlTransaction)
+            MyBase.New()
+            Try
+                _connectionstring = ConfigurationManager.ConnectionStrings("STACATALINA").ConnectionString
+                _transaction = Transaction
+            Catch ex As Exception
+                Select Case Me.ExceptionHandling
+                    Case ExceptionHandlingEnum.RaiseExceptionHandling
+                        RaiseEvent OnError(ex)
+                    Case ExceptionHandlingEnum.ThrowExceptionHandling
+                        Throw (ex)
+                End Select
+            End Try
+        End Sub
+        ''' <summary>
+        ''' Constructor para manipular la Transaction por Reflexión
+        ''' </summary>
+        ''' <remarks></remarks>
+        Sub New(ByVal TransactionOwner As Object)
+            MyBase.New()
+            Try
+                _connectionstring = ConfigurationManager.ConnectionStrings("STACATALINA").ConnectionString
+                Try
+                    Transaction = TransactionOwner.GetType.GetProperty("Transaction").GetValue(TransactionOwner, Nothing)
+                Catch ex As Exception
+                    RaiseEvent OnError(New Exception("Error al asignar transacción"))
+                End Try
+            Catch ex As Exception
+                Select Case Me.ExceptionHandling
+                    Case ExceptionHandlingEnum.RaiseExceptionHandling
+                        RaiseEvent OnError(ex)
+                    Case ExceptionHandlingEnum.ThrowExceptionHandling
+                        Throw (ex)
+                End Select
+            End Try
+        End Sub
+        Public Property ExceptionHandling() As ExceptionHandlingEnum
+            Get
+                Return _exceptionHandling
+            End Get
+            Set(ByVal value As ExceptionHandlingEnum)
+                _exceptionHandling = value
+            End Set
+        End Property
+
+        Public Function Descontar(ByVal deposito As Int32, ByVal articulo As String, ByVal cantidad As Decimal) As Object
+            Dim dr As System.Data.SqlClient.SqlDataReader = Nothing
+            Dim _sqlErr As String = Nothing
+            Try
+                _itemList.Clear()
+                Dim _commandText As String = "DESCUENTAINVENTARIOAJUSTE"
+
+                Dim VDeposito As New SqlParameter("@Deposito", SqlDbType.Int, 10, ParameterDirection.Input, False, 0, 0, Nothing, DataRowVersion.Default, deposito)
+                Dim VArticulo As New SqlParameter("@Articulo", SqlDbType.VarChar, 0, ParameterDirection.Input, False, 0, 0, Nothing, DataRowVersion.Default, articulo)
+                Dim VCantidad As New SqlParameter("@Cantidad", SqlDbType.Decimal, 18, ParameterDirection.Input, False, 0, 0, Nothing, DataRowVersion.Default, cantidad)
+                Dim params() As SqlParameter = {VDeposito, VArticulo, VCantidad}
+                SqlHelper.CommandTimeout = _commandTimeOut
+
+                If _transaction Is Nothing Then
+                    dr = SqlHelper.ExecuteReader(_connectionstring, CommandType.StoredProcedure, _commandText, params)
+                Else
+                    dr = SqlHelper.ExecuteReader(_transaction, CommandType.StoredProcedure, _commandText, params)
+                End If
+
+                While dr.Read
+                    Dim _rowsItemList As New ArrayList
+                    For count As Int32 = 0 To dr.FieldCount - 1
+                        _rowsItemList.Add(New DataField(dr.GetName(count), dr.GetValue(count)))
+
+                    Next
+                    _itemList.Add(_rowsItemList)
+
+                End While
+                Return _itemList
+            Catch ex As System.Exception
+                Select Case Me.ExceptionHandling
+                    Case ExceptionHandlingEnum.RaiseExceptionHandling
+                        RaiseEvent OnError(ex)
+                    Case ExceptionHandlingEnum.ThrowExceptionHandling
+                        Throw (ex)
+                End Select
+                Return Nothing
+            Finally
+                _sqlErr = Nothing
+                If dr IsNot Nothing Then dr.Close()
+            End Try
+        End Function
+
+        ''' <summary>
+        ''' Conserva el resultado de la última consulta.
+        ''' </summary>
+        ''' <returns></returns>
+        ''' <remarks></remarks>
+        Public ReadOnly Property Resultset() As ArrayList
+            Get
+                Return _itemList
+            End Get
+
+        End Property
+
+        Public Class ITEM
+            Inherits Entities.Procedures.DESCUENTAINVENTARIOAJUSTE
+        End Class 'ITEM
+
+        ''' Clase         : ColumnNames 
+        ''' Descripción   : Nombres de Columnas de la tabla DESCUENTAINVENTARIOAJUSTE
+        ''' Fecha de Creación  : lunes, 19 de marzo de 2018
+        ''' <remarks> Representa los Nombres de Columnas de la tabla DESCUENTAINVENTARIOAJUSTE. </remarks>
+        Public Class ColumnNames
+        End Class ' ColumnNames
+    End Class
 End Namespace 'Procedures 

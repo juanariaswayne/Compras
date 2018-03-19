@@ -3733,6 +3733,7 @@ Namespace Tables
         Private _usuario As String
         Private _anulado As Int32
         Private _obs As String
+        Private _motivoajuste_id As Int32
 
         Public Sub New()
             MyBase.New()
@@ -3904,6 +3905,20 @@ Namespace Tables
             End Get
             Set(ByVal Value As String)
                 Me._obs = Value
+            End Set
+        End Property
+        ''' <summary>
+        ''' 
+        ''' </summary>
+        ''' <value></value>
+        ''' <returns>Int32</returns>
+        ''' <remarks></remarks>
+        Public Property MOTIVOAJUSTE_ID() As Int32
+            Get
+                Return Me._motivoajuste_id
+            End Get
+            Set(ByVal Value As Int32)
+                Me._motivoajuste_id = Value
             End Set
         End Property
 
@@ -16142,6 +16157,32 @@ Namespace Procedures
         End Property
 
     End Class 'TRAEREQUERIMIENTOITEMPARAEXCLUIR_INTERNO
+
+    Public Class AJUSTEVENCIMIENTOS
+        Private _result As Object
+        Public Property Result() As Object
+            Get
+                Return _result
+            End Get
+            Set(ByVal value As Object)
+                _result = value
+            End Set
+        End Property
+
+    End Class 'AJUSTEVENCIMIENTOS
+
+    Public Class DESCUENTAINVENTARIOAJUSTE
+        Private _result As Object
+        Public Property Result() As Object
+            Get
+                Return _result
+            End Get
+            Set(ByVal value As Object)
+                _result = value
+            End Set
+        End Property
+
+    End Class 'DESCUENTAINVENTARIOAJUSTE
 End Namespace 'Procedures
 
 Namespace UserObJ

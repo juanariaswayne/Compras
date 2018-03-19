@@ -18197,6 +18197,7 @@ Imports Solar.DataHelper
             usuario
             anulado
             obs
+            motivoAjuste_id
         End Enum
 
         Private _commandText As String = Nothing
@@ -18309,9 +18310,10 @@ Imports Solar.DataHelper
                 Dim Vusuario As New SqlParameter("@usuario", SqlDbType.VarChar, 0, ParameterDirection.Input, False, 0, 0, Nothing, DataRowVersion.Default, Item.USUARIO)
                 Dim Vanulado As New SqlParameter("@anulado", SqlDbType.Int, 10, ParameterDirection.Input, False, 0, 0, Nothing, DataRowVersion.Default, Item.ANULADO)
                 Dim Vobs As New SqlParameter("@obs", SqlDbType.Text, 0, ParameterDirection.Input, False, 0, 0, Nothing, DataRowVersion.Default, Item.OBS)
+                Dim VmotivoAjuste_id As New SqlParameter("@motivoAjuste_id", SqlDbType.Int, 10, ParameterDirection.Input, False, 0, 0, Nothing, DataRowVersion.Default, Item.MOTIVOAJUSTE_ID)
                 Dim Verr As New SqlParameter("@Err", SqlDbType.NVarChar, 100, ParameterDirection.Output, True, 0, 0, "", DataRowVersion.Proposed, _sqlErr)
 
-                Dim params() As SqlParameter = {vPKcodEmp, vPKcomprobante, VtipoMov_id, VsubTipoMov_id, VfechaMov, VdepositoOrigen_id, VsectorOrigen_id, VdepositoDestino_id, VsectorDestino_id, Vusuario, Vanulado, Vobs, Verr}
+                Dim params() As SqlParameter = {vPKcodEmp, vPKcomprobante, VtipoMov_id, VsubTipoMov_id, VfechaMov, VdepositoOrigen_id, VsectorOrigen_id, VdepositoDestino_id, VsectorDestino_id, Vusuario, Vanulado, Vobs, VmotivoAjuste_id, Verr}
                 If _transaction Is Nothing Then
                     result = SqlHelper.ExecuteNonQuery(_connectionstring, CommandType.StoredProcedure, _commandText, params)
                 Else
@@ -18371,6 +18373,7 @@ Imports Solar.DataHelper
                     NewItem.USUARIO = IIf(Convert.IsDBNull(dr("usuario")), Nothing, dr("usuario"))
                     NewItem.ANULADO = IIf(Convert.IsDBNull(dr("anulado")), Nothing, dr("anulado"))
                     NewItem.OBS = IIf(Convert.IsDBNull(dr("obs")), Nothing, dr("obs"))
+                    NewItem.MOTIVOAJUSTE_ID = IIf(Convert.IsDBNull(dr("motivoAjuste_id")), Nothing, dr("motivoAjuste_id"))
                     _itemList.Add(NewItem)
                 End While
                 Return _itemList
@@ -18551,9 +18554,10 @@ Imports Solar.DataHelper
                 Dim Vusuario As New SqlParameter("@usuario", SqlDbType.VarChar, 0, ParameterDirection.Input, False, 0, 0, Nothing, DataRowVersion.Default, Item.USUARIO)
                 Dim Vanulado As New SqlParameter("@anulado", SqlDbType.Int, 10, ParameterDirection.Input, False, 0, 0, Nothing, DataRowVersion.Default, Item.ANULADO)
                 Dim Vobs As New SqlParameter("@obs", SqlDbType.Text, 0, ParameterDirection.Input, False, 0, 0, Nothing, DataRowVersion.Default, Item.OBS)
+                Dim VmotivoAjuste_id As New SqlParameter("@motivoAjuste_id", SqlDbType.Int, 10, ParameterDirection.Input, False, 0, 0, Nothing, DataRowVersion.Default, Item.MOTIVOAJUSTE_ID)
                 Dim Verr As New SqlParameter("@Err", SqlDbType.NVarChar, 100, ParameterDirection.Output, True, 0, 0, "", DataRowVersion.Proposed, _sql)
 
-                Dim params() As SqlParameter = {VcodEmp, Vcomprobante, VtipoMov_id, VsubTipoMov_id, VfechaMov, VdepositoOrigen_id, VsectorOrigen_id, VdepositoDestino_id, VsectorDestino_id, Vusuario, Vanulado, Vobs, Verr}
+                Dim params() As SqlParameter = {VcodEmp, Vcomprobante, VtipoMov_id, VsubTipoMov_id, VfechaMov, VdepositoOrigen_id, VsectorOrigen_id, VdepositoDestino_id, VsectorDestino_id, Vusuario, Vanulado, Vobs, VmotivoAjuste_id, Verr}
                 If _transaction Is Nothing Then
                     Return SqlHelper.ExecuteNonQuery(_connectionstring, CommandType.StoredProcedure, _commandText, params)
                 Else
@@ -18804,7 +18808,7 @@ Imports Solar.DataHelper
 
         ''' Clase         : ColumnNames 
         ''' Descripción   : Nombres de Columnas de la tabla STKMOVIMIENTO
-        ''' Fecha de Creación  : lunes, 31 de octubre de 2016
+        ''' Fecha de Creación  : lunes, 19 de marzo de 2018
         ''' <remarks> Representa los Nombres de Columnas de la tabla STKMOVIMIENTO. </remarks>
         Public Class ColumnNames
             Public Const CODEMP As String = "CODEMP"
@@ -18819,9 +18823,9 @@ Imports Solar.DataHelper
             Public Const USUARIO As String = "USUARIO"
             Public Const ANULADO As String = "ANULADO"
             Public Const OBS As String = "OBS"
+            Public Const MOTIVOAJUSTE_ID As String = "MOTIVOAJUSTE_ID"
         End Class ' ColumnNames
     End Class ' STKMOVIMIENTO
-
 
     Public Class STKMOVIMIENTOITEM
         Public Enum ExceptionHandlingEnum
